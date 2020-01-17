@@ -5,7 +5,6 @@ import "../../styles/home.scss";
 export const Home = () => (
 	<div>
 		<main role="main">
-		
 			{/* Marketing messaging and featurettes
       ================================================== */}
 			{/* Wrap the rest of the page in another container to center all the content. */}
