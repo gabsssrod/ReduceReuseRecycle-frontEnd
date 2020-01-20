@@ -8,13 +8,14 @@ export const Home = () => {
 		<div>
 			<div className="jumbotron1 jumbotron-fluid">
 				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
-					</p>
+					<h1 className="display-4">Ygab 3000</h1>
+					<p className="lead">the ygab 3000 y not 420??</p>
+					<button type="button" className="btn btn-light">
+						<a href="">Back to top</a>
+					</button>
 				</div>
 			</div>
-			<div className="jumbotron2 jumbotron-fluid">
+			<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
 				<div className="container">
 					<h1 className="display-4">Fluid jumbotron</h1>
 					<p className="lead">
