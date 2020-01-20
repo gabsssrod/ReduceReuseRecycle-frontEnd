@@ -7,7 +7,7 @@ export const Navbar = () => {
 	return (
 		<header>
 			<div className="header header1">
-				<button type="button" className="log-in btn btn-light">
+				<button type="button" className="log-inbtn btn-light">
 					Log In
 				</button>
 			</div>
