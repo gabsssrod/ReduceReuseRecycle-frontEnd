@@ -8,7 +8,7 @@ export const Navbar = () => {
 		<header>
 			<div className="header header1">
 				<Link to="/login">
-					<button className="btn1 btn-primary btn-lg" role="button">
+					<button className="btn1 btn-light btn-lg" role="button">
 						Log In
 					</button>
 				</Link>
