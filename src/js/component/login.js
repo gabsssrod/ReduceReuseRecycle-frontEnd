@@ -38,9 +38,11 @@ export const Login = () => {
 					<input type="checkbox" defaultValue="remember-me" /> Remember me
 				</label>
 			</div>
-			<button className="btn btn-lg btn-primary btn-block inputSize" type="submit">
-				Sign in
-			</button>
+			<Link to="/profile">
+				<button className="btn btn-lg btn-primary btn-block inputSize" type="submit">
+					Sign in
+				</button>
+			</Link>
 			<p className="mt-5 mb-3 text-muted">© 2019-2020</p>
 		</form>
 	);
