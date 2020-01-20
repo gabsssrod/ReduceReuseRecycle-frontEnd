@@ -8,9 +8,9 @@ export const Navbar = () => {
 		<header>
 			<div className="header header1">
 				<Link to="/login">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
-						Back home
-					</span>
+					<button className="btn1 btn-primary btn-lg" role="button">
+						Log In
+					</button>
 				</Link>
 			</div>
 		</header>
