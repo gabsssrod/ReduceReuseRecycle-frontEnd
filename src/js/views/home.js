@@ -4,6 +4,7 @@ import "../../styles/home.scss";
 import "../../styles/navbar.scss";
 //import { Link } from "react-router";
 import { HashLink as Link } from "react-router-hash-link";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export const Home = () => {
 	return (
