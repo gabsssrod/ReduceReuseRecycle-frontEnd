@@ -7,9 +7,11 @@ export const Navbar = () => {
 	return (
 		<header>
 			<div className="header header1">
-				<button type="button" className="log-in btn btn-light">
-					Log In
-				</button>
+				<Link to="/login">
+					<span className="btn btn-primary btn-lg" href="#" role="button">
+						Back home
+					</span>
+				</Link>
 			</div>
 		</header>
 	);

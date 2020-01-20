@@ -2,6 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
 import "../../styles/navbar.scss";
+import { Link } from "react-router";
 
 export const Home = () => {
 	return (
