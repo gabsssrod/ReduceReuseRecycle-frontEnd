@@ -38,6 +38,7 @@ export const Layout = () => {
 						<Route path="/notification" component={Notification} />
 						<Route path="/progress" component={Progress} />
 						<Route path="/events" component={Events} />
+						<Route path="/registration" component={Registration} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

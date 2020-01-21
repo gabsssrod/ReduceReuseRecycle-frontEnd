@@ -8,50 +8,61 @@ import "../../styles/navbar.scss";
 
 export const Home = () => {
 	return (
-		<div>
-			<div className="jumbotron1 jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">Ybag 3000</h1>
-					<p className="lead">the ybag3000 y not 420??</p>
-					<Link to="/registration">
-						<button className="btn2 btn-light btn-lg" role="button">
-							Sign Up
+		<>
+			<header>
+				<div className="header header1">
+					<Link to="/login">
+						<button className="btn1 btn-light btn-lg" role="button">
+							Log In
 						</button>
 					</Link>
 				</div>
-			</div>
-			<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
-				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
-					</p>
+			</header>
+			<div>
+				<div className="jumbotron1 jumbotron-fluid">
+					<div className="container">
+						<h1 className="display-4">Ybag 3000</h1>
+						<p className="lead">the ybag3000 y not 420??</p>
+						<Link to="/registration">
+							<button className="btn2 btn-light btn-lg" role="button">
+								Sign Up
+							</button>
+						</Link>
+					</div>
+				</div>
+				<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
+					<div className="container">
+						<h1 className="display-4">Fluid jumbotron</h1>
+						<p className="lead">
+							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+						</p>
+					</div>
+				</div>
+				<div className="jumbotron3 jumbotron-fluid">
+					<div className="container">
+						<h1 className="display-4">Fluid jumbotron</h1>
+						<p className="lead">
+							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+						</p>
+					</div>
+				</div>
+				<div className="jumbotron4 jumbotron-fluid">
+					<div className="container">
+						<h1 className="display-4">Fluid jumbotron</h1>
+						<p className="lead">
+							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+						</p>
+					</div>
+				</div>
+				<div className="jumbotron5 jumbotron-fluid">
+					<div className="container">
+						<h1 className="display-4">Fluid jumbotron</h1>
+						<p className="lead">
+							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+						</p>
+					</div>
 				</div>
 			</div>
-			<div className="jumbotron3 jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
-					</p>
-				</div>
-			</div>
-			<div className="jumbotron4 jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
-					</p>
-				</div>
-			</div>
-			<div className="jumbotron5 jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
-					</p>
-				</div>
-			</div>
-		</div>
+		</>
 	);
 };

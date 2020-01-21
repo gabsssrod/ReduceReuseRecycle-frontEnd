@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Registration = () => {
 	return (
@@ -38,9 +39,11 @@ export const Registration = () => {
 					<input type="checkbox" defaultValue="remember-me" /> Remember me
 				</label>
 			</div>
-			<button type="submit" className="signupbtn">
-				Sign Up
-			</button>
+			<Link to="/profile">
+				<button className="btn1 btn-light btn-lg" role="button">
+					Sign Up
+				</button>
+			</Link>
 			<p className="mt-5 mb-3 text-muted">© 2019-2020</p>
 		</form>
 	);
