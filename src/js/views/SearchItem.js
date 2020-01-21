@@ -1,17 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../../styles/searchItems.scss";
+
 export const SearchItem = () => {
 	return (
-		<div className="card" style={{ width: "18rem" }}>
-			<img src="..." className="card-img-top" alt="..." />
-			<div className="card-body">
-				<h5 className="card-title">users wills search for items here</h5>
-				<p className="card-text" />
-				<a href="#" className="btn btn-primary">
-					Go somewhere
-				</a>
-			</div>
-		</div>
+		<>
+			<form className="form-inline my-2 my-lg-0">
+				<input
+					className="search-input form-control mr-sm-2"
+					type="search"
+					placeholder="Search"
+					aria-label="Search"
+				/>
+				<button className="btn1 btn-light my-2 my-sm-0" type="submit">
+					Search
+				</button>
+			</form>
+		</>
 	);
 };
