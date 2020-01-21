@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import { Registration } from "./views/registration";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -29,6 +30,7 @@ export const Layout = () => {
 						<Route path="/single/:theid" component={Single} />
 						<Route path="/login" component={Login} />
 						<Route path="/profile" component={Profile} />
+						<Route path="/registration" component={Registration} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

@@ -1,5 +1,6 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import "../../styles/navbar.scss";
 //import { Link } from "react-router";
@@ -12,9 +13,11 @@ export const Home = () => {
 				<div className="container">
 					<h1 className="display-4">Ybag 3000</h1>
 					<p className="lead">the ybag3000 y not 420??</p>
-					<button type="button" className="btn btn-light">
-						Learn More
-					</button>
+					<Link to="/registration">
+						<button className="btn2 btn-light btn-lg" role="button">
+							Sign Up
+						</button>
+					</Link>
 				</div>
 			</div>
 			<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
