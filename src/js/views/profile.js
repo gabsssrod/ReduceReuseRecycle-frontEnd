@@ -27,7 +27,7 @@ export const Profile = () => {
 							NOTIFICATIONS
 							<Link to="/notification">
 								<button className="btn1 btn-light btn-lg" role="button">
-									Set up notification
+									See Notifications
 								</button>
 							</Link>
 						</p>
