@@ -1,27 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Notification = () => {
+	const [collapse, setCollapse] = useState("d-none");
+	const [button, setButton] = useState("block");
+
+	const collapseHandler = () => {
+		setCollapse("block");
+		setButton("d-none");
+	};
+
 	return (
-		<div className="jumbotron jumbotron-fluid">
-			<div className="container">
-				<button
-					className="btn btn-primary"
-					type="button"
-					data-toggle="collapse"
-					data-target="#collapseExample"
-					aria-expanded="false"
-					aria-controls="collapseExample">
-					Button with data-target
-				</button>
-				<div className="collapse" id="collapseExample">
-					<div className="card card-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-						Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-						proident.
-					</div>
-				</div>
-			</div>
-		</div>
+		<>
+            <div className="jumbotron jumbotron-fluid">
+            <div className="container">
+                <h1 className="display-4">Your pick up days/h1>
+                <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <button className={button} onClick={collapseHandler}>
+                    Click me
+                </button>
+                <div className={collapse}>
+                    <input type="text" />
+                </div>
+            
+            </div>
+            </div>
+        </>
 	);
 };
