@@ -12,8 +12,8 @@ export const Notification = () => {
 
 	return (
 		<div className="jumbotron jumbotron-fluid">
-			<div className="container">
-				<h1 className="display-4">Your pick up days</h1>
+			<div className="container text-center">
+				<h1 className="display-4 text-center">Your pick up days</h1>
 				<p className="lead" />
 				<button className={button} onClick={collapseHandler}>
 					setp up pick up days
