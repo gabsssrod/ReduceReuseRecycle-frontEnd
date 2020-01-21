@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import "../../styles/notification.scss";
+
 export const Notification = () => {
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
@@ -19,7 +21,28 @@ export const Notification = () => {
 					setp up pick up days
 				</button>
 				<div className={collapse}>
-					<input type="text" placeholder="enter zip" />
+					<div className="row">
+						<select className="col-6 select1 form-control form-control-sm">
+							<option>Select your first pick up day</option>
+							<option>Monday</option>
+							<option>Tuesday</option>
+							<option>Wednesday</option>
+							<option>Thursday</option>
+							<option>Friday</option>
+							<option>Saturday</option>
+							<option>Sunday</option>
+						</select>
+						<select className="cold-6 select2 form-control form-control-sm">
+							<option>Select your second pick up day</option>
+							<option>Monday</option>
+							<option>Tuesday</option>
+							<option>Wednesday</option>
+							<option>Thursday</option>
+							<option>Friday</option>
+							<option>Saturday</option>
+							<option>Sunday</option>
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
