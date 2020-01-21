@@ -12,6 +12,8 @@ export const Notification = () => {
 		setButton("d-none");
 	};
 
+	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 	return (
 		<div className="jumbotron jumbotron-fluid">
 			<div className="container text-center">
@@ -24,23 +26,23 @@ export const Notification = () => {
 					<div className="row">
 						<select className="col-6 select1 form-control form-control-sm">
 							<option>Select your first pick up day</option>
-							<option>Monday</option>
-							<option>Tuesday</option>
-							<option>Wednesday</option>
-							<option>Thursday</option>
-							<option>Friday</option>
-							<option>Saturday</option>
-							<option>Sunday</option>
+							{days.map((item, index) => {
+								return (
+									<option key={index} value={item}>
+										{item}
+									</option>
+								);
+							})}
 						</select>
 						<select className="cold-6 select2 form-control form-control-sm">
 							<option>Select your second pick up day</option>
-							<option>Monday</option>
-							<option>Tuesday</option>
-							<option>Wednesday</option>
-							<option>Thursday</option>
-							<option>Friday</option>
-							<option>Saturday</option>
-							<option>Sunday</option>
+							{days.map((item, index) => {
+								return (
+									<option key={index} value={item}>
+										{item}
+									</option>
+								);
+							})}
 						</select>
 					</div>
 				</div>
