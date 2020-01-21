@@ -5,13 +5,17 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Profile } from "./views/profile";
+import { SearchItem } from "./views/SearchItem";
+import { Notification } from "./views/notification";
+import { Progress } from "./views/progress";
+import { Events } from "./views/events";
 import injectContext from "./store/appContext";
 import { Registration } from "./views/registration";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Login } from "./component/login";
-import { Profile } from "./component/profile";
 
 //create your first component
 export const Layout = () => {
@@ -30,7 +34,10 @@ export const Layout = () => {
 						<Route path="/single/:theid" component={Single} />
 						<Route path="/login" component={Login} />
 						<Route path="/profile" component={Profile} />
-						<Route path="/registration" component={Registration} />
+						<Route path="/SearchItem" component={SearchItem} />
+						<Route path="/notification" component={Notification} />
+						<Route path="/progress" component={Progress} />
+						<Route path="/events" component={Events} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
