@@ -20,7 +20,7 @@ export const Notification = () => {
 				<h1 className="display-4 text-center">Your pick up days</h1>
 				<p className="lead" />
 				<button className={button} onClick={collapseHandler}>
-					setp up pick up days
+					setup up pick up days
 				</button>
 				<div className={collapse}>
 					<div className="row">
