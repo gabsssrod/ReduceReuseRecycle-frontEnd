@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import "../../styles/searchItems.scss";
 
 export const SearchItem = () => {
-	const [search, setSearch] = useState();
-
 	return (
 		<>
 			<div className={search}>
