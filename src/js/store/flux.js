@@ -15,11 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-<<<<<<< HEAD
-			login: (userEmail, userPassword) => {
-=======
 			signin: (userEmail, userPassword) => {
->>>>>>> 28ed03b0b0c77b10da5fb44d5b3408581bee9b47
 				let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/login";
 
 				fetch(url, {
@@ -27,11 +23,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
 						email: userEmail,
-<<<<<<< HEAD
-						password: userEmail
-					})
-				});
-=======
 						password: userPassword
 					})
 				})
@@ -67,7 +58,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 						}
 					});
->>>>>>> 28ed03b0b0c77b10da5fb44d5b3408581bee9b47
 			},
 			changeColor: (index, color) => {
 				//get the store
