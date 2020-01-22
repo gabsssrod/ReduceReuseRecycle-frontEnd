@@ -34,14 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						let first_name = response.first_name;
 						let last_name = response.last_name;
 						if (!token && !email && !firstname && !lastname) {
-							swal(
-								"Sorry we couldn't find an account with that email.",
-								"Try to register first.!",
-								"error",
-								{
-									button: "TRY AGAIN!"
-								}
-							);
+							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
 							// alert('LOGIN SUCCESSFUL');
@@ -50,12 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							localStorage.setItem("email", email);
 							localStorage.setItem("firstname", first_name);
 							localStorage.setItem("lastname", last_name);
-							swal("LOGIN SUCCESSFUL!", "Welcome to eBaG", "success", {
-								button: "Let's Clean"
-							}).then(() => {
-								window.location.href =
-									"https://8080-aff6ad15-68ed-4bfd-9e85-23f281db0ae1.ws-us02.gitpod.io/";
-							});
+							alert("LOGIN SUCCESSFUL!");
 						}
 					});
 			},
