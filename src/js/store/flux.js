@@ -12,17 +12,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+            login : (userEmail, userPassword) => {
+                
+                let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/login"
+
+				fetch(url, {
+                    method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+                        email: userEmail,
+						password: userEmail
+					})
+                });
+                
 			},
 			changeColor: (index, color) => {
 				//get the store

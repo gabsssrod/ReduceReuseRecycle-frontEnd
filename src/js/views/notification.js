@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 import "../../styles/notification.scss";
 
 export const Notification = () => {
+	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
+	const [pickDay, setPickDay] = useState();
+	const [pickday2, setPickDay2] = useState();
 
 	const collapseHandler = () => {
 		setCollapse("block");
@@ -27,7 +31,7 @@ export const Notification = () => {
 						<option>Select your first pick up day</option>
 						{days.map((item, index) => {
 							return (
-								<option key={index} value={item}>
+								<option onSelect={e => setPickDay(e.target.value)} key={index} value={item}>
 									{item}
 								</option>
 							);
@@ -43,6 +47,7 @@ export const Notification = () => {
 							);
 						})}
 					</select>
+					<button onClick={() => actions.loadSomeData()}>Enter</button>
 				</div>
 			</div>
 		</div>

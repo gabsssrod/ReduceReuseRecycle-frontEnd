@@ -1,10 +1,16 @@
-import React from "react";
+import { React, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 import "../../styles/login.scss";
 
 export const Login = () => {
-	return (
+    const { store, actions } = useContext(Context);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    
+    
+    return (
 		<form className="form-signin form1">
 			<img
 				className="mb-4 img1"
@@ -22,7 +28,9 @@ export const Login = () => {
 				id="inputEmail"
 				className="form-control inputSize"
 				placeholder="Email address"
-				required
+                required
+                value={Email}
+                onChange={e => setEmail}
 			/>
 			<label htmlFor="inputPassword" className="sr-only inputSize">
 				Password
@@ -32,7 +40,9 @@ export const Login = () => {
 				id="inputPassword"
 				className="form-control inputSize"
 				placeholder="Password"
-				required
+                required
+                alue={Password}
+                onChange={e => setPassword}
 			/>
 			<div className="checkbox mb-3">
 				<label>
@@ -40,7 +50,7 @@ export const Login = () => {
 				</label>
 			</div>
 			<Link to="/profile">
-				<button className="btn btn-lg btn-primary btn-block inputSize" type="submit">
+				<button className="btn btn-lg btn-primary btn-block inputSize" onClick={() => actions.login(Email,Password)} type="submit">
 					Sign in
 				</button>
 			</Link>
