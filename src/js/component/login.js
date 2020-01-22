@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -10,7 +10,7 @@ export const Login = () => {
 	const [password, setPassword] = useState("");
 
 	return (
-		<form className="form-signin form1">
+		<div className="form-signin form1">
 			<img
 				className="mb-4 img1"
 				src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
@@ -28,8 +28,8 @@ export const Login = () => {
 				className="form-control inputSize"
 				placeholder="Email address"
 				required
-				value={Email}
-				onChange={e => setEmail}
+				value={email}
+				onChange={e => setEmail(e.target.value)}
 			/>
 			<label htmlFor="inputPassword" className="sr-only inputSize">
 				Password
@@ -40,23 +40,21 @@ export const Login = () => {
 				className="form-control inputSize"
 				placeholder="Password"
 				required
-				alue={Password}
-				onChange={e => setPassword}
+				value={password}
+				onChange={e => setPassword(e.target.value)}
 			/>
 			<div className="checkbox mb-3">
 				<label>
 					<input type="checkbox" defaultValue="remember-me" /> Remember me
 				</label>
 			</div>
-			<Link to="/profile">
-				<button
-					className="btn btn-lg btn-primary btn-block inputSize"
-					onClick={() => actions.login(Email, Password)}
-					type="submit">
-					Sign in
-				</button>
-			</Link>
+			<button
+				className="btn btn-lg btn-primary btn-block inputSize"
+				onClick={() => actions.signin(email, password)}
+				type="submit">
+				Sign in
+			</button>
 			<p className="mt-5 mb-3 text-muted">© 2019-2020</p>
-		</form>
+		</div>
 	);
 };
