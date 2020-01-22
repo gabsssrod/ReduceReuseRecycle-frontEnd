@@ -12,22 +12,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			],
+			]
 		},
 		actions: {
-            login : (userEmail, userPassword) => {
-                
-                let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/login"
+			login: (userEmail, userPassword) => {
+				let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/login";
 
 				fetch(url, {
-                    method: "POST",
+					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
-                        email: userEmail,
+						email: userEmail,
 						password: userEmail
 					})
-                });
-                
+				});
 			},
 			changeColor: (index, color) => {
 				//get the store

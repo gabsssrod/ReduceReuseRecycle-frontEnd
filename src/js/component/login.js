@@ -5,12 +5,11 @@ import { Context } from "../store/appContext";
 import "../../styles/login.scss";
 
 export const Login = () => {
-    const { store, actions } = useContext(Context);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    
-    
-    return (
+	const { store, actions } = useContext(Context);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	return (
 		<form className="form-signin form1">
 			<img
 				className="mb-4 img1"
@@ -28,9 +27,9 @@ export const Login = () => {
 				id="inputEmail"
 				className="form-control inputSize"
 				placeholder="Email address"
-                required
-                value={Email}
-                onChange={e => setEmail}
+				required
+				value={Email}
+				onChange={e => setEmail}
 			/>
 			<label htmlFor="inputPassword" className="sr-only inputSize">
 				Password
@@ -40,9 +39,9 @@ export const Login = () => {
 				id="inputPassword"
 				className="form-control inputSize"
 				placeholder="Password"
-                required
-                alue={Password}
-                onChange={e => setPassword}
+				required
+				alue={Password}
+				onChange={e => setPassword}
 			/>
 			<div className="checkbox mb-3">
 				<label>
@@ -50,7 +49,10 @@ export const Login = () => {
 				</label>
 			</div>
 			<Link to="/profile">
-				<button className="btn btn-lg btn-primary btn-block inputSize" onClick={() => actions.login(Email,Password)} type="submit">
+				<button
+					className="btn btn-lg btn-primary btn-block inputSize"
+					onClick={() => actions.login(Email, Password)}
+					type="submit">
 					Sign in
 				</button>
 			</Link>
