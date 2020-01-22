@@ -1,17 +1,16 @@
-import { React, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/login.scss";
 
 export const Login = () => {
-    const { store, actions } = useContext(Context);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    
-    
-    return (
-		<form className="form-signin form1">
+	const { store, actions } = useContext(Context);
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	return (
+		<div className="form-signin form1">
 			<img
 				className="mb-4 img1"
 				src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
@@ -28,9 +27,9 @@ export const Login = () => {
 				id="inputEmail"
 				className="form-control inputSize"
 				placeholder="Email address"
-                required
-                value={Email}
-                onChange={e => setEmail}
+				required
+				value={email}
+				onChange={e => setEmail(e.target.value)}
 			/>
 			<label htmlFor="inputPassword" className="sr-only inputSize">
 				Password
@@ -40,21 +39,22 @@ export const Login = () => {
 				id="inputPassword"
 				className="form-control inputSize"
 				placeholder="Password"
-                required
-                alue={Password}
-                onChange={e => setPassword}
+				required
+				value={password}
+				onChange={e => setPassword(e.target.value)}
 			/>
 			<div className="checkbox mb-3">
 				<label>
 					<input type="checkbox" defaultValue="remember-me" /> Remember me
 				</label>
 			</div>
-			<Link to="/profile">
-				<button className="btn btn-lg btn-primary btn-block inputSize" onClick={() => actions.login(Email,Password)} type="submit">
-					Sign in
-				</button>
-			</Link>
+			<button
+				className="btn btn-lg btn-primary btn-block inputSize"
+				onClick={() => actions.signin(email, password)}
+				type="submit">
+				Sign in
+			</button>
 			<p className="mt-5 mb-3 text-muted">© 2019-2020</p>
-		</form>
+		</div>
 	);
 };
