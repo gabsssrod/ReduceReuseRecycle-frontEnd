@@ -19,6 +19,7 @@ export const Notification = () => {
 	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
+        <>
 		<div className="container text-center">
 			<h1 className="display-4 text-center">Your pick up days</h1>
 			<p className="lead" />
@@ -52,16 +53,20 @@ export const Notification = () => {
 						})}
 					</select>
 					<button onClick={() => actions.addDays(pickDay, pickday2)}>Enter</button>
-
-					{store.daysPicked.map((item, index) => {
-						return (
-							<div key={index}>
-								{item.first_day},{item.second_day}
-							</div>
-						);
-					})}
 				</div>
 			</div>
 		</div>
+        <div>   
+            {!store.daysPicked
+                ? "nope"
+                : store.daysPicked.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                {item.first_day} {item.second_day}
+                            </div>
+                        );
+                    })}
+        </div>
+    </>
 	);
 };
