@@ -54,7 +54,11 @@ export const Notification = () => {
 					<button onClick={() => actions.addDays(pickDay, pickday2)}>Enter</button>
 
 					{store.daysPicked.map((item, index) => {
-						return <div key={index}>{item.first_day}</div>;
+						return (
+							<div key={index}>
+								{item.first_day},{item.second_day}
+							</div>
+						);
 					})}
 				</div>
 			</div>
