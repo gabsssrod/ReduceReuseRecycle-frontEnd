@@ -10,6 +10,7 @@ export const Notification = () => {
 	const [button, setButton] = useState("block");
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
+	const [dayOne, dayTwo] = useState();
 
 	const collapseHandler = () => {
 		setCollapse("block");
@@ -47,7 +48,7 @@ export const Notification = () => {
 							);
 						})}
 					</select>
-					<button onClick={() => actions.loadSomeData()}>Enter</button>
+					<button onClick={() => actions.addDays(dayOne, dayTwo)}>Enter</button>
 				</div>
 			</div>
 		</div>

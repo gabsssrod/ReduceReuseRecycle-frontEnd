@@ -47,6 +47,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					});
 			},
+
+			addDays: (dayOne, dayTwo) => {
+				let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/add_days";
+
+				fetch(url, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						first_day: dayOne,
+						second_day: dayTwo
+					})
+				})
+					.then(res => res.json())
+					.then(response => {
+						let first_day = response.first_day;
+						let second_day = response.second_day;
+						if (!first_day && !second_day) {
+							alert("Please pick your pick up days");
+						} else {
+							alert("days set!");
+						}
+					});
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
