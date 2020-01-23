@@ -22,6 +22,12 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
+			fetch("https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io:443/get_days")
+				.then(r => r.json())
+				.then(data => {
+					let { store, actions } = state;
+					setState({ store: { ...state.store, daysPicked: data }, actions });
+				});
 			/**
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
