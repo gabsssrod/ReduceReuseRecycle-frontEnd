@@ -10,7 +10,6 @@ export const Notification = () => {
 	const [button, setButton] = useState("block");
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
-	const [dayOne, dayTwo] = useState();
 
 	const collapseHandler = () => {
 		setCollapse("block");
@@ -28,17 +27,21 @@ export const Notification = () => {
 			</button>
 			<div className={collapse}>
 				<div className="row">
-					<select className="col-6 select1 form-control form-control-sm">
+					<select
+						className="col-6 select1 form-control form-control-sm"
+						onChange={e => setPickDay(e.target.value)}>
 						<option>Select your first pick up day</option>
 						{days.map((item, index) => {
 							return (
-								<option onSelect={e => setPickDay(e.target.value)} key={index} value={item}>
+								<option key={index} value={item}>
 									{item}
 								</option>
 							);
 						})}
 					</select>
-					<select className="cold-6 select2 form-control form-control-sm">
+					<select
+						className="cold-6 select2 form-control form-control-sm"
+						onChange={e => setPickDay2(e.target.value)}>
 						<option>Select your second pick up day</option>
 						{days.map((item, index) => {
 							return (
@@ -48,7 +51,7 @@ export const Notification = () => {
 							);
 						})}
 					</select>
-					<button onClick={() => actions.addDays(dayOne, dayTwo)}>Enter</button>
+					<button onClick={() => actions.addDays(pickDay, pickday2)}>Enter</button>
 				</div>
 			</div>
 		</div>

@@ -50,13 +50,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addDays: (dayOne, dayTwo) => {
 				let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/add_days";
+				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
 						first_day: dayOne,
-						second_day: dayTwo
+						second_day: dayTwo,
+						user_id: userId
 					})
 				})
 					.then(res => res.json())
