@@ -28,22 +28,53 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(res => res.json())
 					.then(response => {
-						let token = response.token;
-						let userID = response.id;
+						let password = response.password;
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
-						if (!token && !email && !firstname && !lastname) {
+						if (!password && !email && !firstname && !lastname) {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
 							// alert('LOGIN SUCCESSFUL');
-							localStorage.setItem("token", token);
-							localStorage.setItem("userID", userID);
+							localStorage.setItem("password", password);
 							localStorage.setItem("email", email);
 							localStorage.setItem("firstname", first_name);
 							localStorage.setItem("lastname", last_name);
 							alert("LOGIN SUCCESSFUL!");
+						}
+					});
+			},
+
+			registration: (userFirstName, userLastName, userEmail, userPassword) => {
+				let url = "https://3000-b87cf6f9-ed6e-41b6-8e61-6cec731e5a08.ws-us02.gitpod.io/add_user";
+
+				fetch(url, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						first_name: userFirstName,
+						last_name: userLastName,
+						email: userEmail,
+						password: userPassword
+					})
+				})
+					.then(res => res.json())
+					.then(response => {
+						let password = response.password;
+						let email = response.email;
+						let first_name = response.first_name;
+						let last_name = response.last_name;
+						if (!password && !email && !firstname && !lastname) {
+							alert("Error. Try Again MotherFucker.");
+							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
+						} else {
+							// alert('LOGIN SUCCESSFUL');
+							localStorage.setItem("password", password);
+							localStorage.setItem("email", email);
+							localStorage.setItem("firstname", first_name);
+							localStorage.setItem("lastname", last_name);
+							alert("SIGN UP SUCCESSFUL!");
 						}
 					});
 			},
