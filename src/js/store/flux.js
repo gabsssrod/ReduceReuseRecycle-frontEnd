@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			signin: (userEmail, userPassword) => {
-				let url = "https://3000-d1cfea70-bde1-44cf-9c02-be435462b6cb.ws-us02.gitpod.io/login";
+				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io/login";
 
 				fetch(url, {
 					method: "POST",
@@ -34,16 +34,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(res => res.json())
 					.then(response => {
-						let password = response.password;
+						let token = response.token;
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
-						if (!password && !email && !firstname && !lastname) {
+						if (!email && !firstname && !lastname) {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
 							// alert('LOGIN SUCCESSFUL');
-							localStorage.setItem("password", password);
+							localStorage.setItem("token", token);
 							localStorage.setItem("email", email);
 							localStorage.setItem("firstname", first_name);
 							localStorage.setItem("lastname", last_name);
@@ -67,19 +67,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(res => res.json())
 					.then(response => {
-						let password = response.password;
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
-						if (!password && !email && !first_name && !last_name) {
+
+						if (5 > 3) {
 							alert("Error. Try Again MotherFucker.");
 							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
 							// alert('LOGIN SUCCESSFUL');
-							localStorage.setItem("password", password);
 							localStorage.setItem("email", email);
-							localStorage.setItem("first_name", first_name);
-							localStorage.setItem("last_name", last_name);
+							localStorage.setItem("firstName", first_name);
+							localStorage.setItem("lastName", last_name);
 							alert("SIGN UP SUCCESSFUL!");
 						}
 					});
