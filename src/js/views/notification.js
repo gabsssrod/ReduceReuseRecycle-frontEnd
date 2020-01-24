@@ -33,10 +33,12 @@ export const Notification = () => {
 			<div className="container text-center">
 				<h1 className="display-4 text-center">Your pick up days</h1>
 				<p className="lead" />
-				<div className={button}>
+				<div>
 					<button className="btn2" onClick={collapseHandler}>
 						setup up pick up days
 					</button>
+				</div>
+				<div className={button}>
 					<div>
 						{!store.daysPicked
 							? "nope"
