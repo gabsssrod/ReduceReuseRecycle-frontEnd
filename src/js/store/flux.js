@@ -12,6 +12,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			daysPicked: [
+				{
+					first_day: "",
+					second_day: ""
+				}
 			]
 		},
 		actions: {
