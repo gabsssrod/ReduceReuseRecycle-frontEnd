@@ -81,8 +81,6 @@ export const Registration = () => {
 				type="submit">
 				Sign Up
 			</button>
-
-			<p className="mt-5 mb-3 text-muted">© 2019-2020</p>
 		</form>
 	);
 };
