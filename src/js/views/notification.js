@@ -34,7 +34,9 @@ export const Notification = () => {
 				<h1 className="display-4 text-center">Your pick up days</h1>
 				<p className="lead" />
 				<div className={button}>
-					<button onClick={collapseHandler}>setup up pick up days</button>
+					<button className="btn2" onClick={collapseHandler}>
+						setup up pick up days
+					</button>
 					<div>
 						{!store.daysPicked
 							? "nope"
@@ -74,10 +76,9 @@ export const Notification = () => {
 								);
 							})}
 						</select>
-						<button className="btn" onClick={confirmDays}>
+						<button className="btn2" onClick={confirmDays}>
 							confirm bruh
 						</button>
-						<button onClick={() => actions.addDays(pickDay, pickday2)}>Enter</button>
 					</div>
 				</div>
 			</div>
