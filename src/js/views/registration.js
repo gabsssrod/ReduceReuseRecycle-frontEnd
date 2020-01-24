@@ -4,8 +4,8 @@ import { Context } from "../store/appContext";
 
 export const Registration = () => {
 	const { store, actions } = useContext(Context);
-	const [first_name, setFirst_Name] = useState("");
-	const [last_name, setLast_Name] = useState("");
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -27,8 +27,8 @@ export const Registration = () => {
 						className="form-control"
 						placeholder="First Name"
 						required
-						value={first_name}
-						onChange={e => setFirst_Name(e.target.value)}
+						value={firstName}
+						onChange={e => setFirstName(e.target.value)}
 					/>
 				</div>
 				<div className="col form-group">
@@ -38,8 +38,8 @@ export const Registration = () => {
 						className="form-control"
 						placeholder="Last Name"
 						required
-						value={last_name}
-						onChange={e => setLast_Name(e.target.value)}
+						value={lastName}
+						onChange={e => setLastName(e.target.value)}
 					/>
 				</div>
 				<div className="col form-group">
@@ -56,7 +56,7 @@ export const Registration = () => {
 				<div className="col form-group">
 					<label>Password</label>
 					<input
-						type="text"
+						type="password"
 						className="form-control"
 						placeholder="Password"
 						required
@@ -77,7 +77,7 @@ export const Registration = () => {
 			<button
 				className="btn1 btn-light btn-lg"
 				role="button"
-				onClick={() => actions.registration(first_name, last_name, email, password)}
+				onClick={() => actions.registration(firstName, lastName, email, password)}
 				type="submit">
 				Sign Up
 			</button>

@@ -71,15 +71,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
-						if (!password && !email && !firstname && !lastname) {
+						if (!password && !email && !first_name && !last_name) {
 							alert("Error. Try Again MotherFucker.");
 							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
 							// alert('LOGIN SUCCESSFUL');
 							localStorage.setItem("password", password);
 							localStorage.setItem("email", email);
-							localStorage.setItem("firstname", first_name);
-							localStorage.setItem("lastname", last_name);
+							localStorage.setItem("first_name", first_name);
+							localStorage.setItem("last_name", last_name);
 							alert("SIGN UP SUCCESSFUL!");
 						}
 					});
