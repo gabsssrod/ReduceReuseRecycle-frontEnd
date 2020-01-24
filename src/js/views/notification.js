@@ -16,6 +16,16 @@ export const Notification = () => {
 		setButton("d-none");
 	};
 
+	const confirmDays = () => {
+		setCollapse("d-none");
+		setButton("block");
+		actions.addDays(pickDay, pickday2);
+	};
+
+	// const addDays = (pickDay, pickday2) => {
+
+	// }
+
 	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
@@ -23,9 +33,21 @@ export const Notification = () => {
 			<div className="container text-center">
 				<h1 className="display-4 text-center">Your pick up days</h1>
 				<p className="lead" />
-				<button className={button} onClick={collapseHandler}>
-					setup up pick up days
-				</button>
+				<div className={button}>
+					<button onClick={collapseHandler}>setup up pick up days</button>
+					<div>
+						{!store.daysPicked
+							? "nope"
+							: store.daysPicked.map((item, index) => {
+									return (
+										<div key={index}>
+											{item.first_day} {item.second_day}
+											{pickDay} {pickday2}
+										</div>
+									);
+							  })}
+					</div>
+				</div>
 				<div className={collapse}>
 					<div className="row">
 						<select
@@ -52,20 +74,12 @@ export const Notification = () => {
 								);
 							})}
 						</select>
+						<button className="btn" onClick={confirmDays}>
+							confirm bruh
+						</button>
 						<button onClick={() => actions.addDays(pickDay, pickday2)}>Enter</button>
 					</div>
 				</div>
-			</div>
-			<div>
-				{!store.daysPicked
-					? "nope"
-					: store.daysPicked.map((item, index) => {
-							return (
-								<div key={index}>
-									{item.first_day} {item.second_day}
-								</div>
-							);
-					  })}
 			</div>
 		</>
 	);
