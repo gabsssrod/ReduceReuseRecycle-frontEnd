@@ -38,11 +38,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
-						if (!email && !firstname && !lastname) {
+						if (!email && !first_name && !last_name) {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
-							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
 						} else {
-							// alert('LOGIN SUCCESSFUL');
 							localStorage.setItem("token", token);
 							localStorage.setItem("email", email);
 							localStorage.setItem("firstname", first_name);
@@ -67,20 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(res => res.json())
 					.then(response => {
-						let email = response.email;
-						let first_name = response.first_name;
-						let last_name = response.last_name;
-
-						if (5 > 3) {
-							alert("Error. Try Again MotherFucker.");
-							// alert("Sorry we couldn't find an account with that email.\n\n Try to register first.")
-						} else {
-							// alert('LOGIN SUCCESSFUL');
-							localStorage.setItem("email", email);
-							localStorage.setItem("firstName", first_name);
-							localStorage.setItem("lastName", last_name);
-							alert("SIGN UP SUCCESSFUL!");
-						}
+						alert("LOGIN SUCCESSFUL!");
 					});
 			},
 

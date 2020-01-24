@@ -10,7 +10,7 @@ export const Registration = () => {
 	const [password, setPassword] = useState("");
 
 	return (
-		<form className="form-signin form1">
+		<div className="form-signin form1">
 			<img
 				className="mb-4 img1"
 				src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
@@ -81,6 +81,6 @@ export const Registration = () => {
 				type="submit">
 				Sign Up
 			</button>
-		</form>
+		</div>
 	);
 };
