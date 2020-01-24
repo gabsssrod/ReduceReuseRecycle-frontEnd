@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://3000-b87cf6f9-ed6e-41b6-8e61-6cec731e5a08.ws-us02.gitpod.io/add_user";
+				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io/add_user";
 
 				fetch(url, {
 					method: "POST",
