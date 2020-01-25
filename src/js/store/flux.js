@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			signin: (userEmail, userPassword) => {
-				let url = "https://a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io/login";
+				let url = "hhttps://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/login";
 
 				fetch(url, {
 					method: "POST",
@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io/add_user";
+				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/add_user";
 
 				fetch(url, {
 					method: "POST",
@@ -70,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addDays: (dayOne, dayTwo) => {
-				let url = "https://a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io/add_days";
+				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/add_days";
 				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
