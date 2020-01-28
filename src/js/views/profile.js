@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const Profile = () => {
+export const Profile = props => {
 	const { store, actions } = useContext(Context);
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
@@ -33,29 +33,32 @@ export const Profile = () => {
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
 						<p className="card-text">
-							<Link to="/notification">
-								<button className="btn1 btn-light btn-lg" role="button">
+							{!store.buttonPickDays ? (
+								""
+							) : (
+								<Link to="/notification" className={store.buttonPickDays}>
 									set up days
-								</button>
-							</Link>
+								</Link>
+							)}
+
 							<div>
-								<div>here</div>
+								<div>
+									{!store.daysPicked
+										? "nope"
+										: store.daysPicked.map((item, index) => {
+												return (
+													<div key={index}>
+														{item.first_day} {item.second_day}
+														{pickDay} {pickday2}
+													</div>
+												);
+										  })}
+								</div>
 							</div>
 						</p>
 					</div>
 				</div>
 			</div>
-			<br />
-			{!store.daysPicked
-				? "nope"
-				: store.daysPicked.map((item, index) => {
-						return (
-							<div key={index}>
-								{item.first_day} {item.second_day} hey
-								{pickDay} {pickday2}
-							</div>
-						);
-				  })}
 			<br />
 			<div className="card-deck mx-auto">
 				<div className="card">
