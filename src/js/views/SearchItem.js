@@ -1,25 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 import "../../styles/searchItems.scss";
 
 export const SearchItem = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<>
-			<div className={search}>
-				<div className="search1 form-inline">
-					<i className="fas fa-search" aria-hidden="true" />
-					<input
-						className="form-control search-input form-control-sm ml-3 w-75"
-						type="text"
-						aria-label="Search"
-						onChange={e => setSearch(e.target.value)}
-					/>
-				</div>
-			</div>
 			<div className="card">
-				<div className="card-header">Quote</div>
-				<div className="card-body">content</div>
+				{store.materials.map((item, index) => {
+					return (
+						<div key={index} className="card-body">
+							{store.materials}
+						</div>
+					);
+				})}
 			</div>
 		</>
 	);

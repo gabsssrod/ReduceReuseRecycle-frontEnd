@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Profile = () => {
+	const { store, actions } = useContext(Context);
+	const [pickDay, setPickDay] = useState();
+	const [pickday2, setPickDay2] = useState();
+
 	return (
 		<>
 			<div className="card-deck mx-auto">
@@ -10,30 +15,47 @@ export const Profile = () => {
 					<div className="card-body">
 						<h5 className="card-title">search items</h5>
 						<p className="card-text">
-							SEARCH ITEMS
-							<Link to="/SearchItem">
-								<button className="btn1 btn-light btn-lg" role="button">
-									Search
-								</button>
-							</Link>
+							<div className="search">
+								<div className="search1 form-inline">
+									<i className="fas fa-search" aria-hidden="true" />
+									<input
+										className="form-control search-input form-control-sm ml-3 w-75"
+										type="text"
+										aria-label="Search"
+									/>
+								</div>
+							</div>
 						</p>
 					</div>
 				</div>
 				<div className="card">
 					<img src="..." className="card-img-top" alt="" />
 					<div className="card-body">
-						<h5 className="card-title">notifications</h5>
+						<h5 className="card-title">Your Pick Up Days</h5>
 						<p className="card-text">
-							NOTIFICATIONS
 							<Link to="/notification">
 								<button className="btn1 btn-light btn-lg" role="button">
-									See Notifications
+									set up days
 								</button>
 							</Link>
+							<div>
+								<div>here</div>
+							</div>
 						</p>
 					</div>
 				</div>
 			</div>
+			<br />
+			{!store.daysPicked
+				? "nope"
+				: store.daysPicked.map((item, index) => {
+						return (
+							<div key={index}>
+								{item.first_day} {item.second_day} hey
+								{pickDay} {pickday2}
+							</div>
+						);
+				  })}
 			<br />
 			<div className="card-deck mx-auto">
 				<div className="card">

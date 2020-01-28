@@ -22,11 +22,9 @@ export const Home = () => {
 				<div className="jumbotron1 jumbotron-fluid">
 					<div className="container">
 						<h1 className="display-4">Ybag 3000</h1>
-						<p className="lead">the ybag3000 y not 420??</p>
-						<Link to="/registration">
-							<button className="btn2 btn-light btn-lg" role="button">
-								Sign Up
-							</button>
+						<p className="lead">Like shazam but for recycling</p>
+						<Link to="/profile">
+							<button className="btn2 btn">Lets Begin!</button>
 						</Link>
 					</div>
 				</div>

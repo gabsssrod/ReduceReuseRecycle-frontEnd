@@ -66,7 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			signin: (userEmail, userPassword) => {
-				let url = "hhttps://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/login";
+				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/login";
 
 				fetch(url, {
 					method: "POST",
@@ -79,6 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(response => {
 						let token = response.token;
+						let id = response.id;
 						let email = response.email;
 						let first_name = response.first_name;
 						let last_name = response.last_name;
@@ -86,6 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 						} else {
 							localStorage.setItem("token", token);
+							localStorage.setItem("userID", id);
 							localStorage.setItem("email", email);
 							localStorage.setItem("firstname", first_name);
 							localStorage.setItem("lastname", last_name);
@@ -95,7 +97,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/add_user";
+				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/add_user";
 
 				fetch(url, {
 					method: "POST",
@@ -113,8 +115,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			addDays: (dayOne, dayTwo) => {
-				let url = "https://3000-a3d4e98d-6255-4e27-85ee-82e341e6d6e0.ws-us02.gitpod.io:443/add_days";
+			addDays: (dayOne, dayTwo, props) => {
+				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/add_days";
 				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
@@ -134,8 +136,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 							alert("Please pick your pick up days");
 						} else {
 							alert("days set!");
+							props.history.push("/profile");
 						}
 					});
+			},
+
+			getDays: (dayOne, dayTwo) => {
+				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/get_days";
+				let userId = localStorage.getItem("userID");
+
+				fetch(url, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						first_day: dayOne,
+						second_day: dayTwo,
+						user_id: userId
+					})
+				});
 			},
 
 			changeColor: (index, color) => {
