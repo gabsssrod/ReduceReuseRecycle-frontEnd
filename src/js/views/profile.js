@@ -8,6 +8,7 @@ export const Profile = () => {
 	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
+	const [DayButton, setDayButton] = useState("Set Days");
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
 
@@ -19,6 +20,7 @@ export const Profile = () => {
 	const confirmDays = () => {
 		setCollapse("d-none");
 		setButton("block");
+		setDayButton("Update Days");
 		actions.addDays(pickDay, pickday2);
 	};
 
@@ -55,16 +57,8 @@ export const Profile = () => {
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
 						<button className={button} onClick={collapseHandler}>
-							set days
+							{DayButton}
 						</button>
-						{/*	{!store.buttonPickDays ? (
-								""
-							) : (
-								<Link to="/notification" className={store.buttonPickDays}>
-									set up days
-								</Link>
-                            )}
-                            */}
 
 						<div className={collapse}>
 							<div className="row">
