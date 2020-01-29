@@ -8,9 +8,10 @@ export const Profile = () => {
 	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
-	const [DayButton, setDayButton] = useState("Set Days");
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
+
+	let userId = localStorage.getItem("userID");
 
 	const collapseHandler = () => {
 		setCollapse("block");
@@ -20,7 +21,6 @@ export const Profile = () => {
 	const confirmDays = () => {
 		setCollapse("d-none");
 		setButton("block");
-		setDayButton("Update Days");
 		actions.addDays(pickDay, pickday2);
 	};
 
@@ -95,13 +95,12 @@ export const Profile = () => {
 
 						<div className="map days container">
 							<div className="map days text-center">
-								{!store.daysPicked
+								{!store.daysPicked && !userId
 									? "nope"
 									: store.daysPicked.map((item, index) => {
 											return (
 												<div key={index}>
 													{item.first_day} {item.second_day}
-													{pickDay} {pickday2}
 												</div>
 											);
 									  })}
