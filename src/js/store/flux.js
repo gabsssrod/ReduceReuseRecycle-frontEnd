@@ -116,7 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 
-			addDays: (dayOne, dayTwo, props) => {
+			addDays: (dayOne, dayTwo) => {
 				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/add_days";
 				let userId = localStorage.getItem("userID");
 

@@ -6,8 +6,23 @@ import "../../styles/profile.scss";
 
 export const Profile = props => {
 	const { store, actions } = useContext(Context);
+	const [collapse, setCollapse] = useState("d-none");
+	const [button, setButton] = useState("block");
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
+
+	const collapseHandler = () => {
+		setCollapse("block");
+		setButton("d-none");
+	};
+
+	const confirmDays = () => {
+		setCollapse("d-none");
+		setButton("block");
+		actions.addDays(pickDay, pickday2);
+	};
+
+	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
 		<div className="container mx-5">
@@ -34,34 +49,67 @@ export const Profile = props => {
 						<small className="text-muted">Find out the best way to reduce waste!</small>
 					</div> */}
 				</div>
+
 				<div className="card pick days">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
-						<p className="card-text">
-							{!store.buttonPickDays ? (
+						<button className={button} onClick={collapseHandler}>
+							set days
+						</button>
+						{/*	{!store.buttonPickDays ? (
 								""
 							) : (
 								<Link to="/notification" className={store.buttonPickDays}>
 									set up days
 								</Link>
-							)}
+                            )}
+                            */}
 
-							<div>
-								<div>
-									{!store.daysPicked
-										? "nope"
-										: store.daysPicked.map((item, index) => {
-												return (
-													<div key={index}>
-														{item.first_day} {item.second_day}
-														{pickDay} {pickday2}
-													</div>
-												);
-										  })}
-								</div>
+						<div className={collapse}>
+							<div className="row">
+								<select
+									className="col-6 select1 form-control form-control-sm"
+									onChange={e => setPickDay(e.target.value)}>
+									<option>Select your first pick up day</option>
+									{days.map((item, index) => {
+										return (
+											<option key={index} value={item}>
+												{item}
+											</option>
+										);
+									})}
+								</select>
+								<select
+									className="cold-6 select2 form-control form-control-sm"
+									onChange={e => setPickDay2(e.target.value)}>
+									<option>Select your second pick up day</option>
+									{days.map((item, index) => {
+										return (
+											<option key={index} value={item}>
+												{item}
+											</option>
+										);
+									})}
+								</select>
+								<button onClick={confirmDays}>confirm bruh</button>
 							</div>
-						</p>
+						</div>
+
+						<div className="map days container">
+							<div className="map days">
+								{!store.daysPicked
+									? "nope"
+									: store.daysPicked.map((item, index) => {
+											return (
+												<div key={index}>
+													{item.first_day} {item.second_day}
+													{pickDay} {pickday2}
+												</div>
+											);
+									  })}
+							</div>
+						</div>
 					</div>
 					{/* <div className="card-footer">
 						<small className="text-muted">Pickup notifications to help you stay organized!</small>

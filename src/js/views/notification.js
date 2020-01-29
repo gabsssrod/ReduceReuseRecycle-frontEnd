@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+{
+	/*import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -11,11 +12,11 @@ export const Notification = props => {
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
 
+	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 	const confirmDays = () => {
 		actions.addDays(pickDay, pickday2, props);
 	};
-
-	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
 		<>
@@ -56,4 +57,5 @@ export const Notification = props => {
 			</div>
 		</>
 	);
-};
+}; */
+}
