@@ -48,8 +48,9 @@ export const Notification = props => {
 								);
 							})}
 						</select>
-
-						<button onClick={confirmDays}>confirm bruh</button>
+						<Link to="/profile">
+							<button onClick={confirmDays}>confirm bruh</button>
+						</Link>
 					</div>
 				</div>
 			</div>

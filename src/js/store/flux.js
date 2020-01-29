@@ -128,19 +128,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 						second_day: dayTwo,
 						user_id: userId
 					})
-				})
-					.then(res => res.json())
-					.then(response => {
-						let first_day = response.first_day;
-						let second_day = response.second_day;
-						if (!first_day && !second_day) {
-							alert("Please pick your pick up days");
-						} else {
-							alert("days set!");
-							setStore({ buttonPickDays: false });
-							props.history.push("/profile");
-						}
-					});
+				}).then(() => {
+					let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/get_days";
+
+					fetch(url, {
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify({
+							userId: localStorage.getItem("userID")
+						})
+					})
+						.then(r => r.json())
+						.then(data => {
+							setStore({ ...getStore, daysPicked: data });
+						});
+				});
+
+				// .then(res => res.json())
+				// .then(response => {
+				// 	let first_day = response.first_day;
+				// 	let second_day = response.second_day;
+				// 	if (!first_day && !second_day) {
+				// 		alert("Please pick your pick up days");
+				// 	} else {
+				// 		alert("days set!");
+				// 		setStore({ buttonPickDays: false });
+				// 		props.history.push("/profile");
+				// 	}
+				// });
 			},
 
 			changeColor: (index, color) => {
