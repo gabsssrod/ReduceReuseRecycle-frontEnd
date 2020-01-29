@@ -57,7 +57,7 @@ export const Profile = () => {
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
 						<button className={button} onClick={collapseHandler}>
-							{DayButton}
+							{/*{DayButton}*/} set days
 						</button>
 
 						<div className={collapse}>
@@ -75,7 +75,7 @@ export const Profile = () => {
 									})}
 								</select>
 								<select
-									className="cold-6 select2 form-control form-control-sm"
+									className="col-6 select2 form-control form-control-sm"
 									onChange={e => setPickDay2(e.target.value)}>
 									<option>Select your second pick up day</option>
 									{days.map((item, index) => {
@@ -86,7 +86,9 @@ export const Profile = () => {
 										);
 									})}
 								</select>
-								<button onClick={confirmDays}>confirm bruh</button>
+								<button className="btn2" onClick={confirmDays}>
+									confirm days
+								</button>
 							</div>
 						</div>
 
@@ -120,7 +122,7 @@ export const Profile = () => {
 						<h5 className="card-title">Progress</h5>
 						<p className="card-text">Track your trash and monitor your trends!</p>
 						<Link to="/progress">
-							<button className="btn1 btn-light btn-lg" role="button">
+							<button className="btn2 btn-light btn-lg" role="button">
 								See your progress
 							</button>
 						</Link>
@@ -138,7 +140,7 @@ export const Profile = () => {
 							2020 - AERE Annual Summer Conference
 						</p>
 						<Link to="/events">
-							<button className="btn1 btn-light btn-lg" role="button">
+							<button className="btn2 btn-light btn-lg" role="button">
 								Search More Events
 							</button>
 						</Link>
