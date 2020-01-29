@@ -1,7 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			buttonPickDays: true,
 			demo: [
 				{
 					title: "FIRST",
@@ -152,8 +151,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// 		alert("Please pick your pick up days");
 				// 	} else {
 				// 		alert("days set!");
-				// 		setStore({ buttonPickDays: false });
-				// 		props.history.push("/profile");
 				// 	}
 				// });
 			},

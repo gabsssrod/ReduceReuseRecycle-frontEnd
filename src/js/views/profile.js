@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import "../../styles/profile.scss";
 
-export const Profile = props => {
+export const Profile = () => {
 	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
