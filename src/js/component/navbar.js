@@ -7,6 +7,9 @@ export const Navbar = () => {
 	return (
 		<>
 			<ul className="nav">
+				<a className="navbar-brand logoName" href="#">
+					reMINDFUL
+				</a>
 				<li className="nav-item">
 					<Link to="/" className="nav-link">
 						Home

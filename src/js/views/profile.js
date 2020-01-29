@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
+import "../../styles/profile.scss";
 
 export const Profile = props => {
 	const { store, actions } = useContext(Context);

@@ -11,18 +11,21 @@ export const Home = () => {
 		<>
 			<header>
 				<div className="header header1">
-					<Link to="/login">
-						<button className="btn1 btn-light btn-lg" role="button">
-							Log In
-						</button>
-					</Link>
+					<span>
+						<p className="logoName">reMINDFUL</p>
+						<Link to="/login">
+							<button className="btn1 btn-light btn-lg" role="button">
+								Log In
+							</button>
+						</Link>
+					</span>
 				</div>
 			</header>
 			<div>
 				<div className="jumbotron1 jumbotron-fluid">
 					<div className="container">
-						<h1 className="display-4">Ybag 3000</h1>
-						<p className="lead">Like shazam but for recycling</p>
+						<h1 className="display-4">reMINDFUL</h1>
+						<p className="lead">Reduce. Reuse. Recycle. Re•mindful.</p>
 						<Link to="/profile">
 							<button className="btn2 btn">Lets Begin!</button>
 						</Link>
