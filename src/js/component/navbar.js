@@ -35,7 +35,7 @@ export const Navbar = () => {
 					</li>
 					<li className="nav-item">
 						<Link to="/registration" className="nav-link">
-							Register
+							Sign up
 						</Link>
 					</li>
 				</ul>
