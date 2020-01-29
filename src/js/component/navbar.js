@@ -18,7 +18,7 @@ export const Navbar = () => {
 					</Link>
 				</li>
 				<li className="nav-item">
-					<Link to="/profil" className="nav-link">
+					<Link to="/profile" className="nav-link">
 						My Profile
 					</Link>
 				</li>

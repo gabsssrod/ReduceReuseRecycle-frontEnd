@@ -13,7 +13,7 @@ export const Profile = props => {
 			<div className="card-deck mb-4">
 				<div className="card">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
-					<div className="card-body">
+					<div className="card-body search">
 						<h5 className="card-title">Search Items</h5>
 						<p className="card-text">Search for any item for the easiest way to stay earth friendly.</p>
 						<p className="card-text">
@@ -33,7 +33,7 @@ export const Profile = props => {
 						<small className="text-muted">Find out the best way to reduce waste!</small>
 					</div> */}
 				</div>
-				<div className="card">
+				<div className="card pick days">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
@@ -69,7 +69,7 @@ export const Profile = props => {
 			</div>
 
 			<div className="card-deck">
-				<div className="card">
+				<div className="card progress">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
 						<h5 className="card-title">Progress</h5>
@@ -84,7 +84,7 @@ export const Profile = props => {
 						<small className="text-muted">Keep track of your trash and monitor your contributions!</small>
 					</div> */}
 				</div>
-				<div className="card">
+				<div className="card events">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
 						<h5 className="card-title">Upcoming Events</h5>
