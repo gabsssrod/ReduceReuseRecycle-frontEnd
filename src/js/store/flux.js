@@ -142,17 +142,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({ ...getStore, daysPicked: data });
 						});
 				});
-
-				// .then(res => res.json())
-				// .then(response => {
-				// 	let first_day = response.first_day;
-				// 	let second_day = response.second_day;
-				// 	if (!first_day && !second_day) {
-				// 		alert("Please pick your pick up days");
-				// 	} else {
-				// 		alert("days set!");
-				// 	}
-				// });
 			},
 
 			changeColor: (index, color) => {
