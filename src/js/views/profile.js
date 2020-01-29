@@ -58,9 +58,9 @@ export const Profile = () => {
 						<h5 className="card-title">Your Pick Up Days</h5>
 
 						<div className={collapse}>
-							<div className="row">
+							<div className="select">
 								<select
-									className="col-6 select1 form-control form-control-sm"
+									className="select1 form-control form-control-sm"
 									onChange={e => setPickDay(e.target.value)}>
 									<option>Select your first pick up day</option>
 									{days.map((item, index) => {
@@ -71,8 +71,9 @@ export const Profile = () => {
 										);
 									})}
 								</select>
+								<br />
 								<select
-									className="col-6 select2 form-control form-control-sm"
+									className="select2 form-control form-control-sm"
 									onChange={e => setPickDay2(e.target.value)}>
 									<option>Select your second pick up day</option>
 									{days.map((item, index) => {
@@ -83,9 +84,12 @@ export const Profile = () => {
 										);
 									})}
 								</select>
-								<button className="btn2" onClick={confirmDays}>
-									confirm days
-								</button>
+								<br />
+								<div className="confirmDay">
+									<button className="btn2" onClick={confirmDays}>
+										Confirm Days
+									</button>
+								</div>
 							</div>
 						</div>
 
