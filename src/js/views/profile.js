@@ -56,9 +56,6 @@ export const Profile = () => {
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
 						<h5 className="card-title">Your Pick Up Days</h5>
-						<button className={button} onClick={collapseHandler}>
-							{/*{DayButton}*/} set days
-						</button>
 
 						<div className={collapse}>
 							<div className="row">
@@ -106,6 +103,9 @@ export const Profile = () => {
 									  })}
 							</div>
 						</div>
+						<button className={button} onClick={collapseHandler}>
+							Set Days
+						</button>
 					</div>
 					{/* <div className="card-footer">
 						<small className="text-muted">Pickup notifications to help you stay organized!</small>
