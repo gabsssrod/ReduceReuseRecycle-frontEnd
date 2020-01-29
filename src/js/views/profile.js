@@ -94,7 +94,7 @@ export const Profile = () => {
 						</div>
 
 						<div className="map days container">
-							<div className="map days">
+							<div className="map days text-center">
 								{!store.daysPicked
 									? "nope"
 									: store.daysPicked.map((item, index) => {
@@ -107,6 +107,7 @@ export const Profile = () => {
 									  })}
 							</div>
 						</div>
+						<br />
 						<div className="setDayButton">
 							<button className={button} onClick={collapseHandler}>
 								Set Days
