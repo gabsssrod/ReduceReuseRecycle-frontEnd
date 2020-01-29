@@ -103,9 +103,11 @@ export const Profile = () => {
 									  })}
 							</div>
 						</div>
-						<button className={button} onClick={collapseHandler}>
-							Set Days
-						</button>
+						<div className="setDayButton">
+							<button className={button} onClick={collapseHandler}>
+								Set Days
+							</button>
+						</div>
 					</div>
 					{/* <div className="card-footer">
 						<small className="text-muted">Pickup notifications to help you stay organized!</small>
