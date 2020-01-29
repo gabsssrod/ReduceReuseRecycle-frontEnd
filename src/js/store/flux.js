@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			buttonPickDays: true,
 			demo: [
 				{
 					title: "FIRST",
@@ -136,24 +137,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 							alert("Please pick your pick up days");
 						} else {
 							alert("days set!");
+							setStore({ buttonPickDays: false });
 							props.history.push("/profile");
 						}
 					});
-			},
-
-			getDays: (dayOne, dayTwo) => {
-				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/get_days";
-				let userId = localStorage.getItem("userID");
-
-				fetch(url, {
-					method: "POST",
-					headers: { "Content-Type": "application/json" },
-					body: JSON.stringify({
-						first_day: dayOne,
-						second_day: dayTwo,
-						user_id: userId
-					})
-				});
 			},
 
 			changeColor: (index, color) => {
