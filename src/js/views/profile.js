@@ -25,7 +25,7 @@ export const Profile = props => {
 	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
-		<div className="container mx-5">
+		<div className="container m-5">
 			<div className="card-deck mb-4">
 				<div className="card search">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}

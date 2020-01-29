@@ -9,25 +9,17 @@ import "../../styles/navbar.scss";
 export const Home = () => {
 	return (
 		<>
-			<header>
-				<div className="header header1">
-					<span>
-						<p className="logoName">reMINDFUL</p>
-						<Link to="/login">
-							<button className="btn1 btn-light btn-lg" role="button">
-								Log In
-							</button>
-						</Link>
-					</span>
-				</div>
-			</header>
 			<div>
 				<div className="jumbotron1 jumbotron-fluid">
 					<div className="container">
 						<h1 className="display-4">reMINDFUL</h1>
-						<p className="lead">Reduce. Reuse. Recycle. Re•mindful.</p>
+						<p className="lead">Reduce. Reuse. Recycle. ReMindful.</p>
 						<Link to="/profile">
-							<button className="btn2 btn">Lets Begin!</button>
+							<button className="btn2 btn mx-1">Lets Begin!</button>
+						</Link>
+
+						<Link to="/login">
+							<button className="btn2 btn mx-1">Login (to track Progress)</button>
 						</Link>
 					</div>
 				</div>
