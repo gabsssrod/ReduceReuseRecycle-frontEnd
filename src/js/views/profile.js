@@ -86,7 +86,7 @@ export const Profile = () => {
 								</select>
 								<br />
 								<div className="confirmDay">
-									<button className="btn2" onClick={confirmDays}>
+									<button className="btn2 btn-light" onClick={confirmDays}>
 										Confirm Days
 									</button>
 								</div>
@@ -122,19 +122,19 @@ export const Profile = () => {
 			{/*PROGRESS AND EVENTS CARDS*/}
 
 			<div className="card-deck mb-4">
-				<div className="card progress">
+				<div className="card trends">
 					{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 					<div className="card-body">
-						<h5 className="card-title">Progress</h5>
-						<p className="card-text">Track your trash and monitor your trends!</p>
-						<Link to="/progress">
-							<button className="btn2 btn-light btn-lg" role="button">
-								See your progress
+						<h5 className="card-title">Track your trash and monitor your trends!</h5>
+						<p className="card-text">See your progress here!</p>
+						<Link to="/events">
+							<button className="btn2 btn-light" role="button">
+								lets take a look at your progress!
 							</button>
 						</Link>
 					</div>
 					{/* <div className="card-footer">
-						<small className="text-muted">Keep track of your trash and monitor your contributions!</small>
+						<small className="text-muted">A curated list of upcoming earth-friendly events.</small>
 					</div> */}
 				</div>
 				<div className="card events">
@@ -146,7 +146,7 @@ export const Profile = () => {
 							2020 - AERE Annual Summer Conference
 						</p>
 						<Link to="/events">
-							<button className="btn2 btn-light btn-lg" role="button">
+							<button className="btn2 btn-light" role="button">
 								Search More Events
 							</button>
 						</Link>
