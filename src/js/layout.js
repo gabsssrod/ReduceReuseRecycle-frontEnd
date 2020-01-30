@@ -7,6 +7,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Profile } from "./views/profile";
 import { SearchItem } from "./views/SearchItem";
+import { searchResult } from "./views/searchResult";
 import { Notification } from "./views/notification";
 import { Progress } from "./views/progress";
 import { Events } from "./views/events";
@@ -35,6 +36,7 @@ export const Layout = () => {
 						<Route path="/login" component={Login} />
 						<Route path="/profile" component={Profile} />
 						<Route path="/SearchItem" component={SearchItem} />
+						<Route path="/searchResult" component={searchResult} />
 						<Route path="/notification" component={Notification} />
 						<Route path="/progress" component={Progress} />
 						<Route path="/events" component={Events} />

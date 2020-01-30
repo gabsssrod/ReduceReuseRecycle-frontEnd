@@ -43,6 +43,11 @@ export const Profile = () => {
 										type="text"
 										aria-label="Search"
 									/>
+									<button type="button" className="btn btn-outline-dark">
+										<Link to="/searchResult" className="nav-link">
+											Go!
+										</Link>
+									</button>
 								</div>
 							</div>
 						</p>
