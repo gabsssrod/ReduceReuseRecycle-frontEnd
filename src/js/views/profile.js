@@ -101,7 +101,6 @@ export const Profile = () => {
 											return (
 												<div key={index}>
 													{item.first_day} {item.second_day}
-													{pickDay} {pickday2}
 												</div>
 											);
 									  })}
