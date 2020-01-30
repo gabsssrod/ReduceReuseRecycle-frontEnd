@@ -11,7 +11,7 @@ export const Events = () => {
 		<div className="row">
 			{store.events.map((item, index) => {
 				return (
-					<div className="col-sm" key={index}>
+					<div className="col-sm m-5 mx-auto" key={index}>
 						<Card key={index} style={{ width: "18rem" }}>
 							<Card.Img variant="top" src="" />
 							<Card.Body>
