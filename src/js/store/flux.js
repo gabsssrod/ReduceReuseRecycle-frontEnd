@@ -62,8 +62,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 					first_day: "",
 					second_day: ""
 				}
+			],
+
+			events: [
+				{
+					eventName: "Environmental Chemistry and Pollution Control",
+					eventDate: "March 12th, 2020",
+					eventLocation: "Miami, Florida",
+					eventdescription:
+						"The IRC is a federated organization dedicated to bringing together a significant number of diverse scholarly events for presentation within the conference program. The event provides an exceptional value for students, academics and industry researchers."
+				},
+				{
+					eventName: "AERE Annual Summer Conference",
+					eventDate: "June 3rd, 2020",
+					eventLocation: "Miami, Florida",
+					eventdescription:
+						"AERE’s signature Summer Conference gathers the world’s leading environmental and natural resource economists for two days of outstanding academic programming in a collegial atmosphere."
+				},
+				{
+					eventName: "International Conference on Climate Change and Environmental Hazards ICCCEH",
+					eventDate: "March 12-13, 2020",
+					eventLocation: "Miami, Florida",
+					eventdescription:
+						"World Academy of Science, Engineering and Technology is a federated organization dedicated to bringing together a significant number of diverse scholarly events for presentation within the conference program."
+				}
 			]
 		},
+
 		actions: {
 			signin: (userEmail, userPassword) => {
 				let url = "https://3000-eda8b61d-de48-414b-b2e4-45e48d3d5001.ws-us02.gitpod.io:443/login";
@@ -142,17 +167,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({ ...getStore, daysPicked: data });
 						});
 				});
-
-				// .then(res => res.json())
-				// .then(response => {
-				// 	let first_day = response.first_day;
-				// 	let second_day = response.second_day;
-				// 	if (!first_day && !second_day) {
-				// 		alert("Please pick your pick up days");
-				// 	} else {
-				// 		alert("days set!");
-				// 	}
-				// });
 			},
 
 			changeColor: (index, color) => {
