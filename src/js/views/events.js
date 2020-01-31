@@ -14,7 +14,7 @@ export const Events = () => {
 					<button className="btn2">Add Event</button>
 				</Link>
 			</div>
-			<div className="row">
+			<div className="cardEvent m-5 mx-auto row">
 				{store.events.map((item, index) => {
 					return (
 						<div className="col-sm m-5 mx-auto" key={index}>
