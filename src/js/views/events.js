@@ -11,6 +11,9 @@ export const Events = () => {
 
 	return (
 		<>
+			<div className="eventsHeader text-center mt-5">
+				<h2>EVENTS</h2>
+			</div>
 			<div className="eventButton">
 				<Link to="addEvent">
 					<button className="btn2">Add Event</button>
@@ -19,7 +22,7 @@ export const Events = () => {
 			<div className="cardEvent m-3 mx-auto row">
 				{store.events.map((item, index) => {
 					return (
-						<div className="col-sm m-5 mx-auto" key={index}>
+						<div className="col mx-auto" key={index}>
 							<Card key={index} style={{ width: "20rem" }}>
 								<Card.Img variant="top" style={{ height: "200px" }} src={item.eventImage} />
 								<Card.Body>
@@ -37,6 +40,11 @@ export const Events = () => {
 						</div>
 					);
 				})}
+			</div>
+			<div style={{ display: "inline" }}>
+				<div style={{ display: "inline", backgroundColor: "red", width: "33.33%" }}>eed</div>
+				<div style={{ display: "inline", backgroundColor: "blue", width: "33.33%" }}>heffrfy</div>
+				<div style={{ display: "inline", backgroundColor: "green", width: "33.33%" }}>heffrfy</div>
 			</div>
 		</>
 	);
