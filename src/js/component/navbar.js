@@ -6,7 +6,7 @@ import "../../styles/navbar.scss";
 export const Navbar = () => {
 	return (
 		<>
-			<nav className="navbar navbar-expand-md navbar-light bg-light fixed-top">
+			<nav className="navbar navbar-expand-md navbar-light fixed-top">
 				<ul className="nav p-2">
 					<li className="nav-item logoName">
 						<Link to="/" className="nav-link">
