@@ -1,12 +1,20 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import "../../styles/navbar.scss";
-//import { Link } from "react-router";
-//import { HashLink as Link } from "react-router-hash-link";
+
+import rigoImage from "../../img/rigo-baby.jpg";
+import landingImage from "../../img/ladingImage.jpg";
 
 export const Home = () => {
+	let bg = [
+		"https://cdn.pixabay.com/photo/2018/10/11/04/33/vietnam-3738879_1280.jpg",
+		"https://cdn.pixabay.com/photo/2019/11/08/21/42/landscape-4612528_1280.jpg",
+		"https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301_1280.jpg",
+		"https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004_1280.jpg"
+	];
+	let randomImage = Math.floor(Math.random() * bg.length);
+
 	return (
 		<>
 			<div>
