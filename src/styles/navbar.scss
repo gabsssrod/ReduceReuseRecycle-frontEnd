@@ -2,10 +2,11 @@
     // background-color: #45bf9a;
     background-image: url("https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004_1280.jpg");
     background-size: cover;
-    position: relative;
+    // position: relative;
     color: #fff;
     height: 800px;
     text-align: center;
+    margin-top: -73px;
     padding-top: 16%;
 }
 
@@ -72,7 +73,9 @@ button{
 }
 .navbar {
     background-color: #f2f0ed;
+    opacity: 0.4;
 }
 .nav a {
     color: black!important;
 }
+
