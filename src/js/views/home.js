@@ -23,11 +23,11 @@ export const Home = () => {
 						<h1 className="display-4">reMINDFUL</h1>
 						<p className="lead">Reduce. Reuse. Recycle. ReMindful.</p>
 						<Link to="/profile">
-							<button className="btn2 btn mx-1">Lets Begin!</button>
+							<button className="btn2 btn mx-1 samir">Lets Begin!</button>
 						</Link>
 
 						<Link to="/login">
-							<button className="btn2 btn mx-1">Login (to track Progress)</button>
+							<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
 						</Link>
 					</div>
 				</div>
