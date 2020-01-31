@@ -66,13 +66,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			events: [
 				{
+					eventImage: "https://waset.org/i/1140x400/static/images/cities/miami.jpg",
 					eventName: "Environmental Chemistry and Pollution Control",
 					eventDate: "March 12th, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"The IRC is a federated organization dedicated to bringing together a significant number of diverse scholarly events for presentation within the conference program. The event provides an exceptional value for students, academics and industry researchers."
+						"The IRC is a federated organization dedicated to bringing together a significant number of diverse scholarly events. The event provides an exceptional value for students, academics and industry researchers."
 				},
 				{
+					eventImage: "https://www.aere.org/assets/aere_sum20_meetingheader.jpg",
 					eventName: "AERE Annual Summer Conference",
 					eventDate: "June 3rd, 2020",
 					eventLocation: "Miami, Florida",
@@ -80,11 +82,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"AERE’s signature Summer Conference gathers the world’s leading environmental and natural resource economists for two days of outstanding academic programming in a collegial atmosphere."
 				},
 				{
-					eventName: "International Conference on Climate Change and Environmental Hazards ICCCEH",
-					eventDate: "March 12-13, 2020",
+					eventImage: "https://booksandbooks.com/wp-content/uploads/2017/06/logobnb.png",
+					eventName: "We Are The Guardians of Our Environment",
+					eventDate: "February 27, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"World Academy of Science, Engineering and Technology is a federated organization dedicated to bringing together a significant number of diverse scholarly events for presentation within the conference program."
+						"Whats happening to our planet? Australia, The Amazon, rising sea levels, etc....? Joing the conversation along side experts of the field, and be part of the solution. Lets be the guardians of our planet!"
 				}
 			]
 		},
