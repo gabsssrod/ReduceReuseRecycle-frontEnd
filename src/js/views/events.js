@@ -16,20 +16,22 @@ export const Events = () => {
 					<button className="btn2">Add Event</button>
 				</Link>
 			</div>
-			<div className="cardEvent m-3 mx-auto row text-center">
+			<div className="cardEvent m-3 mx-auto row">
 				{store.events.map((item, index) => {
 					return (
 						<div className="col-sm m-5 mx-auto" key={index}>
 							<Card key={index} style={{ width: "20rem" }}>
-								<Card.Img variant="top" src="" />
+								<Card.Img variant="top" style={{ height: "200px" }} src={item.eventImage} />
 								<Card.Body>
-									<Card.Title style={{ text: "center" }}>{item.eventName}</Card.Title>
+									<Card.Title>{item.eventName}</Card.Title>
 									<Card.Text>
 										<p>
 											{item.eventDate}
 											{item.eventLocation}
 										</p>
-										<p>{item.eventdescription}</p>
+										<p>
+											<small>{item.eventdescription}</small>
+										</p>
 									</Card.Text>
 								</Card.Body>
 							</Card>
