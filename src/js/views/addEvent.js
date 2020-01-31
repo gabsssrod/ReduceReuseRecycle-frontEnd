@@ -80,7 +80,11 @@ export const Addevents = () => {
 					<textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
 				</div>
 			</div>
+<<<<<<< HEAD
+			<div>
+=======
 			<div className="row text-center">
+>>>>>>> d2cce8b9d8ba2160ad4644ce102227d20fb804b9
 				<button className="btn2">Submit Event</button>
 			</div>
 		</div>
