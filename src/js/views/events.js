@@ -26,8 +26,7 @@ export const Events = () => {
 									<Card.Title>{item.eventName}</Card.Title>
 									<Card.Text>
 										<p>
-											{item.eventDate}
-											{item.eventLocation}
+											{item.eventDate}-{item.eventLocation}
 										</p>
 										<p>
 											<small>{item.eventdescription}</small>
@@ -42,19 +41,3 @@ export const Events = () => {
 		</>
 	);
 };
-
-{
-	/* <Card style={{ width: "18rem" }}>
-	<Card.Img variant="top" src="holder.js/100px180" />
-	<Card.Body>
-		<Card.Title>{item.eventName}</Card.Title>
-		<Card.Text>
-			<p>
-				{item.eventDate} - {item.eventLocation}
-			</p>
-			<p>{item.eventdescription}</p>
-		</Card.Text>
-		<Button variant="primary">Go somewhere</button>
-	</Card.Body>
-</Card>; */
-}

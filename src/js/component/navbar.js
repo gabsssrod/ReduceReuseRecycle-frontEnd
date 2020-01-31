@@ -34,13 +34,6 @@ export const Navbar = () => {
 						</Link>
 					</li>
 				</ul>
-				{/* 
-			<Link to="/notification">Notifications</Link>
-			<Link to="/login">Login</Link>
-			<Link to="/profile">My Profile</Link>
-			<Link to="/progress">Progress</Link>
-			<Link to="/events">Events</Link>
-			<Link to="/registration">Register</Link> */}
 			</nav>
 		</>
 	);
