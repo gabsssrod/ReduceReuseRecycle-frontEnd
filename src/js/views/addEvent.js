@@ -7,19 +7,21 @@ import "../../styles/events_eventsForm.scss";
 
 export const Addevents = () => {
 	return (
-		<div className="container eventsContainer bg-white">
-			<div>Event Registration Form</div>
+		<div className="container eventsContainer m-5 mx-auto">
+			<div className="eventFormTitle">
+				<p>Please Fill out the information below to register this event</p>
+			</div>
 			<div className="form-row mt-3">
 				<div className="col">
 					<label>First Name</label>
 					<input id="inputAlert4" type="text" className="form-control" placeholder="First Name" />
 				</div>
 				<div className="col">
-					<label f>Last Name</label>
+					<label>Last Name</label>
 					<input id="inputAlert5" type="text" className="form-control" placeholder="Last Name" />
 				</div>
 			</div>
-			<div className="row">
+			<div className="form-row">
 				<div className="col">
 					<label>Address</label>
 					<input id="inputAlert4" type="text" className="form-control" placeholder="Street Address" />
@@ -39,15 +41,19 @@ export const Addevents = () => {
 					<input id="inputAlert8" type="text" className="form-control" placeholder="zip" />
 				</div>
 			</div>
-			<div>Event Information:</div>
+			<div className="row">
+				<div className="col">Event Information:</div>
+			</div>
 			<div className="form-row mt-3">
 				<div className="col">
-					<label>Event Name</label>
+					<label>Name</label>
 					<input id="inputAlert4" type="text" className="form-control" placeholder="Event Name" />
 				</div>
 			</div>
-			<div className="event location">Event Location:</div>
-			<div className="row">
+			<div className="form-row mt-3">
+				<div className="col">Location</div>
+			</div>
+			<div className="form-row mt-3">
 				<div className="col">
 					<label>Address</label>
 					<input id="inputAlert4" type="text" className="form-control" placeholder="Street Address" />
@@ -67,16 +73,16 @@ export const Addevents = () => {
 					<input id="inputAlert8" type="text" className="form-control" placeholder="zip" />
 				</div>
 			</div>
-			<div>Describe your event below:</div>
-			<div className="row">
+			<div>Describe your event below</div>
+			<div className="form-row">
 				<div className="form-group col">
 					<label htmlFor="exampleFormControlTextarea1" />
 					<textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
 				</div>
 			</div>
-            <div>
-                <button className="btn2">Submit Event</button>
-            </div>
+			<div className="row text-center">
+				<button className="btn2">Submit Event</button>
+			</div>
 		</div>
 	);
 };
