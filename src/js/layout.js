@@ -13,6 +13,7 @@ import { Progress } from "./views/progress";
 import { Events } from "./views/events";
 import injectContext from "./store/appContext";
 import { Registration } from "./views/registration";
+import { Addevents } from "./views/addEvent";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -41,6 +42,7 @@ export const Layout = () => {
 						<Route path="/progress" component={Progress} />
 						<Route path="/events" component={Events} />
 						<Route path="/registration" component={Registration} />
+						<Route path="/addEvent" component={Addevents} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

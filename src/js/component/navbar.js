@@ -14,11 +14,6 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/notification" className="nav-link">
-							Notifications
-						</Link>
-					</li>
-					<li className="nav-item">
 						<Link to="/profile" className="nav-link">
 							My Profile
 						</Link>

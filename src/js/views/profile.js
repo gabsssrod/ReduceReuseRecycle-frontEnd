@@ -132,8 +132,8 @@ export const Profile = () => {
 					<div className="card-body">
 						<h5 className="card-title">Track your trash and monitor your trends!</h5>
 						<p className="card-text">See your progress here!</p>
-						<Link to="/events">
-							<button className="btn2 btn-light" role="button">
+						<Link to="/progress">
+							<button className="btn2" role="button">
 								lets take a look at your progress!
 							</button>
 						</Link>
@@ -151,7 +151,7 @@ export const Profile = () => {
 							2020 - AERE Annual Summer Conference
 						</p>
 						<Link to="/events">
-							<button className="btn2 btn-light" role="button">
+							<button className="btn2" role="button">
 								Search More Events
 							</button>
 						</Link>
