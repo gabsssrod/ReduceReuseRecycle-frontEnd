@@ -1,5 +1,9 @@
 .jumbotron1 {
-    background-color: #45bf9a;
+    // background-color: #45bf9a;
+    background-image: url("https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004_1280.jpg");
+    background-size: cover;
+    position: relative;
+    color: #fff;
     height: 800px;
     text-align: center;
     padding-top: 16%;
@@ -67,6 +71,8 @@ button{
     padding-top: 16%;
 }
 .navbar {
-    background-color: #7F7EFF;
+    background-color: #f2f0ed;
 }
-
+.nav a {
+    color: black!important;
+}

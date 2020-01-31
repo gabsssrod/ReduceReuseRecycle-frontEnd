@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export const Footer = () => (
-	<footer className="container-fluid fixed-bottom pt-4">
+	<footer className="container-fluid fixed-bottom pt-2">
 		{/* <p className="float-right"><a href="#">Back to top</a></p> */}
 		<p className="text-center">
 			© 2019-2020 reMindful, Inc.
