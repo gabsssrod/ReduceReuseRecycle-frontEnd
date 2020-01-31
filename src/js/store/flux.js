@@ -87,7 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					eventDate: "February 27, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"Whats happening to our planet? Australia, The Amazon, etc? Joing the conversation and be part of the solution, along side experts of the field."
+						"Whats happening to our planet? Australia, The Amazon, rising sea levels, etc....? Joing the conversation along side experts of the field, and be part of the solution. Lets be the guardians of our planet!"
 				}
 			]
 		},
