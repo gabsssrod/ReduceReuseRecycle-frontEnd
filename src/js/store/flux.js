@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			searchResults: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -55,6 +56,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"You can reuse your plastic bags, for example, the plastic bags you get from the supermaket can be reused! Save the for your next grocery trip.",
 					trash:
 						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
+				},
+				{
+					name: "paolo",
+					material: "plastic",
+					recycle:
+						"Maybe! Make sure any bags you are recycling have a #2 or #4 plastic symbol on them. If not, you can’t be sure what plastic resin the bag is made from, so you’ll want to reuse it instead. Remove anything inside the bags, such as receipts, stickers, or crumbs. All these items will contaminate your bag load. Keep a bag collection bin in your house",
+					reduce:
+						"The best way to reduce your consumption of plastic bags is by switching over to resuable bags. However, keep in mind that for reusuable bags to make a positive impact you have to keep them for at least 10 years, due to the ammount of resources it takes to make them.",
+					reuse:
+						"You can reuse your plastic bags, for example, the plastic bags you get from the supermaket can be reused! Save the for your next grocery trip.",
+					trash:
+						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
 				}
 			],
 			daysPicked: [
@@ -93,6 +106,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			search: input => {
+				console.log("search", input);
+				const store = getStore();
+				// let search = store.materials.filter((item)=> item.name == input)
+				setStore({ searchResults: store.materials.filter(item => item.name.includes(input)) });
+			},
 			signin: (userEmail, userPassword) => {
 				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/login";
 

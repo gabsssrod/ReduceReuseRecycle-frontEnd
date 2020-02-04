@@ -33,7 +33,7 @@ export const Home = () => {
 				</div>
 				<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
 					<div className="container">
-						<h1 className="display-4">Fluid jumbotron</h1>
+						<h1 className="display-4">About Us </h1>
 						<p className="lead">
 							This is a modified jumbotron that occupies the entire horizontal space of its parent.
 						</p>
@@ -41,7 +41,7 @@ export const Home = () => {
 				</div>
 				<div className="jumbotron3 jumbotron-fluid">
 					<div className="container">
-						<h1 className="display-4">Fluid jumbotron</h1>
+						<h1 className="display-4">Reduce</h1>
 						<p className="lead">
 							This is a modified jumbotron that occupies the entire horizontal space of its parent.
 						</p>
@@ -49,7 +49,7 @@ export const Home = () => {
 				</div>
 				<div className="jumbotron4 jumbotron-fluid">
 					<div className="container">
-						<h1 className="display-4">Fluid jumbotron</h1>
+						<h1 className="display-4">Reuse</h1>
 						<p className="lead">
 							This is a modified jumbotron that occupies the entire horizontal space of its parent.
 						</p>
@@ -57,7 +57,7 @@ export const Home = () => {
 				</div>
 				<div className="jumbotron5 jumbotron-fluid">
 					<div className="container">
-						<h1 className="display-4">Fluid jumbotron</h1>
+						<h1 className="display-4">Recycle</h1>
 						<p className="lead">
 							This is a modified jumbotron that occupies the entire horizontal space of its parent.
 						</p>

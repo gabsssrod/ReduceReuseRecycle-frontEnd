@@ -5,18 +5,21 @@ import { Context } from "../store/appContext";
 import "../../styles/searchItems.scss";
 
 export const SearchItem = () => {
+	const [search, setSearch] = useState();
 	const { store, actions } = useContext(Context);
 
 	return (
 		<>
-			<div className="card">
-				{store.materials.map((item, index) => {
-					return (
-						<div key={index} className="card-body">
-							{store.materials}
-						</div>
-					);
-				})}
+			<div className="container">
+				<div className="row">
+					<div className="col">
+						<input type="text" placeholder="Search" onChange={e => setSearch(e.target.value)} />
+
+						<button onClick={() => actions.search(search)} className="btn btn-info">
+							Search
+						</button>
+					</div>
+				</div>
 			</div>
 		</>
 	);

@@ -4,28 +4,21 @@ import { Context } from "../store/appContext";
 import ReactDOM from "react-dom";
 import { Card } from "react-bootstrap";
 
-export const searchResult = () => {
-	let people = ["Colby", "Ivette", "Gaby", "Paolo", "Samir", "Antuan", "Jose"];
-	const [searchTerm, setSearchTerm] = React.useState("");
-	const [searchResults, setSearchResults] = React.useState([]);
-	const handleChange = e => {
-		setSearchTerm(e.target.value);
-	};
-	React.useEffect(
-		() => {
-			const results = people.filter(person => person.toLowerCase().includes(searchTerm));
-			setSearchResults(results);
-		},
-		[searchTerm]
-	);
+export const SearchResult = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<>
 			<div className="searchResult">
-				<input type="text" placeholder="Search" value={searchTerm} onChange={handleChange} />
 				<ul>
-					{searchResults.map((item, index) => (
-						<li key={index}>{item}</li>
-					))}
+					{store.searchResults != undefined &&
+						store.searchResults.map((item, index) => {
+							return (
+								<Link key={index} to={"/single/" + index}>
+									<li>{item.name}</li>
+								</Link>
+							);
+						})}
 				</ul>
 			</div>
 		</>

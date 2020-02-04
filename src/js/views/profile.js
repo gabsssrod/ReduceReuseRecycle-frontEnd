@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import "../../styles/profile.scss";
+import { SearchItem } from "../views/SearchItem";
+import { SearchResult } from "../views/searchResult";
 
 export const Profile = () => {
 	const { store, actions } = useContext(Context);
@@ -38,18 +40,10 @@ export const Profile = () => {
 							<div className="search">
 								<div className="search1 form-inline">
 									<i className="fas fa-search" aria-hidden="true" />
-									<input
-										className="form-control search-input form-control-sm ml-3 w-75"
-										type="text"
-										aria-label="Search"
-									/>
-									<button type="button" className="btn btn-outline-dark">
-										<Link to="/searchResult" className="nav-link">
-											Go!
-										</Link>
-									</button>
+									<SearchItem />
 								</div>
 							</div>
+							<SearchResult />
 						</p>
 					</div>
 					{/* <div className="card-footer">
