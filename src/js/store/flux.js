@@ -84,7 +84,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					eventDate: "March 12th, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"The IRC is a federated organization dedicated to bringing together a significant number of diverse scholarly events. The event provides an exceptional value for students, academics and industry researchers."
+						"The IRC is a federated organization dedicated to bringing together a significant number of diverse scholarly events. The event provides an exceptional value for students, academics and industry researchers.",
+					eventInfo:
+						"https://waset.org/environmental-chemistry-and-pollution-control-conference-in-march-2020-in-miami"
 				},
 				{
 					eventImage: "https://www.aere.org/assets/aere_sum20_meetingheader.jpg",
@@ -92,7 +94,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					eventDate: "June 3rd, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"AERE’s signature Summer Conference gathers the world’s leading environmental and natural resource economists for two days of outstanding academic programming in a collegial atmosphere."
+						"AERE’s signature Summer Conference gathers the world’s leading environmental and natural resource economists for two days of outstanding academic programming in a collegial atmosphere.",
+					eventInfo: "https://www.aere.org/summer-conference"
 				},
 				{
 					eventImage: "https://booksandbooks.com/wp-content/uploads/2017/06/logobnb.png",
@@ -100,7 +103,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					eventDate: "February 27, 2020",
 					eventLocation: "Miami, Florida",
 					eventdescription:
-						"Whats happening to our planet? Australia, The Amazon, rising sea levels, etc....? Joing the conversation along side experts of the field, and be part of the solution. Lets be the guardians of our planet!"
+						"Whats happening to our planet? Australia, The Amazon, rising sea levels, etc....? Joing the conversation along side experts of the field, and be part of the solution. Lets be the guardians of our planet!",
+					eventInfo:
+						"https://booksandbooks.com/event/90-minutes-of-solutions-we-are-the-guardians-of-our-environment/"
 				}
 			]
 		},

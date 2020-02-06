@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { Card } from "react-bootstrap";
 
 import "../../styles/events_eventsForm.scss";
 
@@ -15,36 +14,29 @@ export const Events = () => {
 				<h2>EVENTS</h2>
 			</div>
 			<div className="eventButton">
-				<Link to="addEvent">
-					<button className="btn2">Add Event</button>
+				<Link to="/addEvent">
+					<i className="fas fa-plus-circle fa-lg" />
 				</Link>
 			</div>
-			<div className="cardEvent m-3 mx-auto row">
+			<div className="card-group">
 				{store.events.map((item, index) => {
 					return (
-						<div className="col mx-auto" key={index}>
-							<Card key={index} style={{ width: "20rem" }}>
-								<Card.Img variant="top" style={{ height: "200px" }} src={item.eventImage} />
-								<Card.Body>
-									<Card.Title>{item.eventName}</Card.Title>
-									<Card.Text>
-										<p>
-											{item.eventDate}-{item.eventLocation}
-										</p>
-										<p>
-											<small>{item.eventdescription}</small>
-										</p>
-									</Card.Text>
-								</Card.Body>
-							</Card>
+						<div className="card eventsCard" key={index}>
+							<Link to={item.eventInfo}>
+								<img src={item.eventImage} className="card-img-top" alt="..." />
+							</Link>
+							<div className="card-body">
+								<h5 className="card-title">{item.eventName}</h5>
+								<p className="card-text">
+									{item.eventDate}-{item.eventLocation}
+								</p>
+								<p>
+									<small>{item.eventdescription}</small>
+								</p>
+							</div>
 						</div>
 					);
 				})}
-			</div>
-			<div style={{ display: "inline" }}>
-				<div style={{ display: "inline", backgroundColor: "red", width: "33.33%" }}>eed</div>
-				<div style={{ display: "inline", backgroundColor: "blue", width: "33.33%" }}>heffrfy</div>
-				<div style={{ display: "inline", backgroundColor: "green", width: "33.33%" }}>heffrfy</div>
 			</div>
 		</>
 	);
