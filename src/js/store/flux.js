@@ -119,8 +119,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"https://www.eventbrite.com/e/kids-research-environment-wildlife-a-free-community-meet-up-tickets-85648341495?aff=ebdssbdestsearch"
 				},
 				{
-					eventImage:
-						"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F84420875%2F179314325957%2F1%2Foriginal.20191212-205055?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=145%2C86%2C774%2C387&s=4f18c3f5c248bcc755b16b35194d6389",
+					eventImage: "https://cdn.britannica.com/37/191237-050-574791A6/garden-Japanese.jpg",
 					eventName: "Water Issues in our Landscapes, Gardens and Parks",
 					eventDate: "Febuary 8, 2020",
 					eventLocation: "Miami, Florida",
