@@ -18,12 +18,17 @@ export const Events = () => {
 					<i className="fas fa-plus-circle fa-lg" />
 				</Link>
 			</div>
-			<div className="card-group">
+			<div className="row eventsCard1">
 				{store.events.map((item, index) => {
 					return (
-						<div className="card eventsCard" key={index}>
+						<div className="col-4 card eventsCard" key={index}>
 							<Link to={item.eventInfo}>
-								<img src={item.eventImage} className="card-img-top" alt="..." />
+								<img
+									src={item.eventImage}
+									className="card-img-top"
+									alt="..."
+									style={{ height: "200px" }}
+								/>
 							</Link>
 							<div className="card-body">
 								<h5 className="card-title">{item.eventName}</h5>

@@ -106,6 +106,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Whats happening to our planet? Australia, The Amazon, rising sea levels, etc....? Joing the conversation along side experts of the field, and be part of the solution. Lets be the guardians of our planet!",
 					eventInfo:
 						"https://booksandbooks.com/event/90-minutes-of-solutions-we-are-the-guardians-of-our-environment/"
+				},
+				{
+					eventImage:
+						"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F84128529%2F301804108155%2F1%2Foriginal.20191210-162930?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C5000%2C2500&s=4aa25faef7cb98b31879609a17842694",
+					eventName: "Kids Research Environment & Wildlife",
+					eventDate: "April 25, 2020",
+					eventLocation: "Miami, Florida",
+					eventdescription:
+						"Jungle Islands Kids Research Environment & Wildlife: allows kids to learn while doing! This month theme: Biome Series: One of the things that makes Earth so amazing is the numerous biomes that make it up!",
+					eventInfo:
+						"https://www.eventbrite.com/e/kids-research-environment-wildlife-a-free-community-meet-up-tickets-85648341495?aff=ebdssbdestsearch"
+				},
+				{
+					eventImage:
+						"https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F84420875%2F179314325957%2F1%2Foriginal.20191212-205055?w=1080&auto=format%2Ccompress&q=75&sharp=10&rect=145%2C86%2C774%2C387&s=4f18c3f5c248bcc755b16b35194d6389",
+					eventName: "Water Issues in our Landscapes, Gardens and Parks",
+					eventDate: "Febuary 8, 2020",
+					eventLocation: "Miami, Florida",
+					eventdescription:
+						"This seminar will look at increasing rainfall trends and explore solutions already in play around the world from China’s Sponge Cities to our own Miami Dade County Parks, Recreation and Open Spaces.",
+					eventInfo:
+						"https://www.eventbrite.com/e/water-issues-in-our-landscapes-gardens-and-parks-tickets-86034462393?aff=ebdssbdestsearch"
 				}
 			]
 		},
