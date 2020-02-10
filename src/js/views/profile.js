@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import "../../styles/index.scss";
-import "../../styles/profile.scss";
+
 import { SearchItem } from "../views/SearchItem";
 import { SearchResult } from "../views/searchResult";
 
