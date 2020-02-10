@@ -13,7 +13,7 @@ export const Login = () => {
 		<div className="login_Background">
 			<div className="container login_Container">
 				<div className="container input_Container">
-					<h5 className="mb-3 font-weight-normal">Please sign in</h5>
+					<h5 className="mb-3 font-weight-normal" />
 					<label htmlFor="inputEmail" className="sr-only inputSize m-2">
 						Email address
 					</label>
@@ -44,7 +44,7 @@ export const Login = () => {
 						</label>
 					</div>
 					<button className="login_btn" onClick={() => actions.signin(email, password)} type="submit">
-						Sign in
+						Login
 					</button>
 					<p>
 						<small className="register_Link">Register</small>
