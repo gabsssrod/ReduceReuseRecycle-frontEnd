@@ -13,7 +13,7 @@ export const Login = () => {
 		<div className="login_Background">
 			<div className="container login_Container">
 				<div className="container input_Container">
-					<h1 className="mb-3 font-weight-normal">Please sign in</h1>
+					<h5 className="mb-3 font-weight-normal">Please sign in</h5>
 					<label htmlFor="inputEmail" className="sr-only inputSize m-2">
 						Email address
 					</label>
@@ -38,7 +38,7 @@ export const Login = () => {
 						value={password}
 						onChange={e => setPassword(e.target.value)}
 					/>
-					<div className="checkbox mb-3">
+					<div className="checkbox mb-3 remember_Me">
 						<label>
 							<input type="checkbox" defaultValue="remember-me" /> Remember me
 						</label>
