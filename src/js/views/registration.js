@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
+import "../../styles/registration.scss";
+
 export const Registration = () => {
 	const { store, actions } = useContext(Context);
 	const [firstName, setFirstName] = useState("");
@@ -10,77 +12,67 @@ export const Registration = () => {
 	const [password, setPassword] = useState("");
 
 	return (
-		<div className="form-signin form1">
-			<img
-				className="mb-4 img1"
-				src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
-				alt=""
-				width={72}
-				height={72}
-			/>
-			<h1 className="h3 mb-3 font-weight-normal">Sign Up</h1>
-			<div>
-				<div className="col form-group">
-					<label>First Name </label>
-					<input
-						type="text"
-						className="form-control"
-						placeholder="First Name"
-						required
-						value={firstName}
-						onChange={e => setFirstName(e.target.value)}
-					/>
+		<div className="signin_Background">
+			<div className="container signin_Container">
+				<h1 className="h3 mb-3 font-weight-normal">Sign Up</h1>
+				<div>
+					<div className="col form-group">
+						<input
+							type="text"
+							className="form-control signin_input"
+							placeholder="First Name"
+							required
+							value={firstName}
+							onChange={e => setFirstName(e.target.value)}
+						/>
+					</div>
+					<div className="col form-group">
+						<input
+							type="text"
+							className="form-control signin_input"
+							placeholder="Last Name"
+							required
+							value={lastName}
+							onChange={e => setLastName(e.target.value)}
+						/>
+					</div>
+					<div className="col form-group">
+						<input
+							type="text"
+							className="form-control signin_input"
+							placeholder="Email Address"
+							required
+							value={email}
+							onChange={e => setEmail(e.target.value)}
+						/>
+					</div>
+					<div className="col form-group">
+						<input
+							type="password"
+							className="form-control signin_input"
+							placeholder="Password"
+							required
+							value={password}
+							onChange={e => setPassword(e.target.value)}
+						/>
+					</div>
+					<div className="col form-group">
+						<input type="text" className="form-control signin_input" placeholder="Comfirm Password" />
+					</div>
 				</div>
-				<div className="col form-group">
-					<label>Last Name</label>
-					<input
-						type="text"
-						className="form-control"
-						placeholder="Last Name"
-						required
-						value={lastName}
-						onChange={e => setLastName(e.target.value)}
-					/>
+				<div className="checkbox mb-3 signin_Remember_Me">
+					<label>
+						<input type="checkbox" defaultValue="remember-me" /> Remember me
+					</label>
 				</div>
-				<div className="col form-group">
-					<label>Email Address</label>
-					<input
-						type="text"
-						className="form-control"
-						placeholder="Email Address"
-						required
-						value={email}
-						onChange={e => setEmail(e.target.value)}
-					/>
-				</div>
-				<div className="col form-group">
-					<label>Password</label>
-					<input
-						type="password"
-						className="form-control"
-						placeholder="Password"
-						required
-						value={password}
-						onChange={e => setPassword(e.target.value)}
-					/>
-				</div>
-				<div className="col form-group">
-					<label>Confirm Password </label>
-					<input type="text" className="form-control" placeholder />
-				</div>
+				<button
+					className="signin_btn"
+					role="button"
+					onClick={() => actions.registration(firstName, lastName, email, password)}
+					type="submit">
+					Sign Up
+				</button>
 			</div>
-			<div className="checkbox mb-3">
-				<label>
-					<input type="checkbox" defaultValue="remember-me" /> Remember me
-				</label>
-			</div>
-			<button
-				className="btn1 btn-light btn-lg"
-				role="button"
-				onClick={() => actions.registration(firstName, lastName, email, password)}
-				type="submit">
-				Sign Up
-			</button>
 		</div>
 	);
 };

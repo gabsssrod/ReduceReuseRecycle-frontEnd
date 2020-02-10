@@ -1,0 +1,39 @@
+ .signin_Background{
+    // background-color: #45bf9a;
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/09/09/40/mountains-1245937_1280.jpg");
+    background-size: cover;
+    position: relative;
+    // color: #fff;
+    height: 900px;
+    text-align: center;
+    margin-top: -73px;
+    padding-top: 16%;
+}
+ 
+ 
+ .signin_Container{
+    height: 450px;
+    width: 500px;
+    margin-top: 20px;
+    background-color: rgba(242, 240, 237, 0.5);
+}
+
+
+.signin_input{
+    width: 300px;
+    display: inline-block;
+    border: solid 1px white;
+    opacity: 0.9;
+}
+
+.signin_btn{
+    border-radius: 3px;
+    margin-top: 10px;
+    border: solid 1px white;
+    width: 300px;
+}
+
+
+.signin_Remember_Me{
+    margin-right: 180px;
+}
