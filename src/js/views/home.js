@@ -43,7 +43,14 @@ export const Home = () => {
 					<div className="container">
 						<h1 className="display-4">Reduce</h1>
 						<p className="lead">
-							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+							The most effective way to reduce waste is to not create it in the first place. Making a new
+							product requires a lot of materials and energy - raw materials must be extracted from the
+							earth, and the product must be fabricated then transported to wherever it will be sold. As a
+							result, reduction and reuse are the most effective ways you can save natural resources,
+							protect the environment and save money.
+							<Link to="https://www.epa.gov/recycle/reducing-and-reusing-basics">
+								<button>Learn More</button>
+							</Link>
 						</p>
 					</div>
 				</div>
@@ -59,7 +66,9 @@ export const Home = () => {
 					<div className="container">
 						<h1 className="display-4">Recycle</h1>
 						<p className="lead">
-							This is a modified jumbotron that occupies the entire horizontal space of its parent.
+							Recycling is the process of collecting and processing materials that would otherwise be
+							thrown away as trash and turning them into new products. Recycling can benefit your
+							community and the environment.
 						</p>
 					</div>
 				</div>
