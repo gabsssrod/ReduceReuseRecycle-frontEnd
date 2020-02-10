@@ -14,7 +14,7 @@ export const Registration = () => {
 	return (
 		<div className="signin_Background">
 			<div className="container signin_Container">
-				<h1 className="h3 mb-3 font-weight-normal">Sign Up</h1>
+				<h5 className="mb-3 font-weight-normal">Sign Up</h5>
 				<div>
 					<div className="col form-group">
 						<input
@@ -70,7 +70,7 @@ export const Registration = () => {
 					role="button"
 					onClick={() => actions.registration(firstName, lastName, email, password)}
 					type="submit">
-					Sign Up
+					Creat My Account
 				</button>
 			</div>
 		</div>
