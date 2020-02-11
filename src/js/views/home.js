@@ -32,7 +32,7 @@ export const Home = () => {
 					</div>
 				</div>
 				<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
-					<div className="container">
+					<div className="aboutUs">
 						<>
 							<h1 className="display-4">Be Mindful</h1>
 							<p className="lead">
@@ -43,14 +43,36 @@ export const Home = () => {
 								recycling in a frictionless manner so that we can provide a smooth and easy recyling
 								experience, and leave a better planet for our children.
 							</p>
+							<br />
+							<div className="row">
+								<div className="container mx-auto col-6">
+									<img
+										src="https://media-exp1.licdn.com/dms/image/C5603AQGVdJBetfpXAQ/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=hmxrXV1KhJ52LbWNGq9qhU9z6fPACTVlz3pEId-6Dk0"
+										alt="Avatar"
+										className="gabyPic"
+									/>
+									<p>Gabriela Rodriguez, Full Stack Web Developer</p>
+								</div>
+								<div className="container mx-auto col-6">
+									<img
+										src="https://athlonsports.com/sites/athlonsports.com/files/styles/article_top_img/public/Michael_Jordan_1.jpg?itok=VOzOm9pb"
+										alt="Avatar"
+										className="gabyPic"
+									/>
+									<p>Jordan Aguiriano, Full Stack Web Developer</p>
+								</div>
+							</div>
 						</>
 					</div>
 				</div>
 				<div className="row">
 					<div className="jumbotron3 jumbotron-fluid col-6">
-						<div className="container">
-							<h1 className="display-4" />
-							<p className="lead" />
+						<div className="container mx-auto">
+							<img
+								src="https://cdn.pixabay.com/photo/2015/07/03/14/59/water-830374_960_720.jpg"
+								alt="Avatar"
+								className="reducePic"
+							/>
 						</div>
 					</div>
 					<div className="jumbotron33 jumbotron-fluid col-6">
@@ -83,9 +105,12 @@ export const Home = () => {
 						</div>
 					</div>
 					<div className="jumbotron44 jumbotron-fluid col-6">
-						<div className="container">
-							<h1 className="display-4" />
-							<p className="lead" />
+						<div className="container mx-auto">
+							<img
+								src="http://handmadebykelly.com/wp-content/uploads/2014/06/final-e1403638792149.jpg"
+								alt="Avatar"
+								className="reUsePic"
+							/>
 						</div>
 					</div>
 				</div>
@@ -100,6 +125,13 @@ export const Home = () => {
 							pollution caused by waste. Habitat destruction and global warming are some the affects
 							caused by deforestation.
 						</p>
+						<div className="container mx-auto">
+							<img
+								src="https://cdn.pixabay.com/photo/2018/08/01/11/37/plastic-3577044_960_720.jpg"
+								alt="Avatar"
+								className="recyclePic"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

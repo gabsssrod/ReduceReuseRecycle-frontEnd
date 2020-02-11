@@ -48,14 +48,43 @@ button{
     background-color: #bae6ef;
     height: 800px;
     text-align: center;
-    padding-top: 16%;
+    padding-top: 8%;
 }
 
 .jumbotron3 {
     background-color: #bae6ef;
-    height: 800px;
+    // background-image: url(https://cdn.pixabay.com/photo/2015/07/03/14/59/water-830374_960_720.jpg);
+    // border-radius: 50%;
     text-align: center;
     padding-top: 16%;
+}
+
+.gabyPic {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.reducePic {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.reUsePic {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.recyclePic {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    border-radius: 50%;
 }
 
 .jumbotron33 {
