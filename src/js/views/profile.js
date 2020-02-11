@@ -39,7 +39,6 @@ export const Profile = () => {
 							<p className="card-text">
 								<div className="search">
 									<div className="search1 form-inline">
-										<i className="fas fa-search" aria-hidden="true" />
 										<SearchItem />
 									</div>
 								</div>

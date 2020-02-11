@@ -16,7 +16,7 @@ export const SearchItem = () => {
 						<input type="text" placeholder="Search" onChange={e => setSearch(e.target.value)} />
 
 						<button onClick={() => actions.search(search)} className="btn btn-info">
-							Search
+							<i className="fas fa-search" aria-hidden="true" />
 						</button>
 					</div>
 				</div>
