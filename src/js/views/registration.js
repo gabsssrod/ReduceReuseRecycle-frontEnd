@@ -70,7 +70,7 @@ export const Registration = () => {
 					role="button"
 					onClick={() => actions.registration(firstName, lastName, email, password)}
 					type="submit">
-					Creat My Account
+					Create My Account
 				</button>
 			</div>
 		</div>
