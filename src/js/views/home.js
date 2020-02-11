@@ -35,7 +35,7 @@ export const Home = () => {
 					<div className="aboutUs">
 						<>
 							<h1 className="display-4">Be Mindful</h1>
-							<p className="lead">
+							<p className="lead aboutUs1">
 								Being mindful means to be conscious or aware of something. At ReMindful we are aware
 								that many people do not know the proper way to recycle. This does not mean that people
 								are not interested in recycling. We believe that people would be more likely to recycle
@@ -51,15 +51,15 @@ export const Home = () => {
 										alt="Avatar"
 										className="gabyPic"
 									/>
-									<p>Gabriela Rodriguez, Full Stack Web Developer</p>
+									<p className="gabyText">Gabriela Rodriguez, Full Stack Web Developer</p>
 								</div>
 								<div className="container mx-auto col-6">
 									<img
-										src="https://athlonsports.com/sites/athlonsports.com/files/styles/article_top_img/public/Michael_Jordan_1.jpg?itok=VOzOm9pb"
+										src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6XCFWNCV3EI6TKUDKBHQQ27V2Y.jpg&w=767"
 										alt="Avatar"
 										className="gabyPic"
 									/>
-									<p>Jordan Aguiriano, Full Stack Web Developer</p>
+									<p className="gabyText">Jordan Aguiriano, Full Stack Web Developer</p>
 								</div>
 							</div>
 						</>
