@@ -73,7 +73,7 @@ export const Home = () => {
 									<img src={electricCar} className="car" alt="" />
 								</div>
 								<br />
-								<div className="titleDiv">
+								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">REDUCE</h6>
 								</div>
 								<p className="">
@@ -97,7 +97,7 @@ export const Home = () => {
 									<img src={detergent} className="car" alt="" />
 								</div>
 								<br />
-								<div className="titleDiv">
+								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">REUSE</h6>
 								</div>
 								<p className="">
@@ -120,7 +120,7 @@ export const Home = () => {
 									<img src={trash} className="car" alt="" />
 								</div>
 								<br />
-								<div className="titleDiv">
+								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">RECYCLE</h6>
 								</div>
 								<p>
