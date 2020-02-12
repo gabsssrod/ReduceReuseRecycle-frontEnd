@@ -1,5 +1,5 @@
 .eventsContainer {
-    width: 730px;
+    // width: 730px;
 }
 
 .eventFormTitle{
@@ -17,9 +17,11 @@
     border-radius: 0 !important;
     border: none;
     // border-color: lightgray;
-    width: 33%;
+    width: 20%;
+    // max-width: 150px;
     height: 450px;
     padding: 0px;
+    margin: 2%;
     
 }
     

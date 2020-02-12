@@ -25,7 +25,6 @@ export const Home = () => {
 						<Link to="/profile">
 							<button className="btn2 btn mx-1 samir">Lets Begin!</button>
 						</Link>
-
 						<Link to="/login">
 							<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
 						</Link>

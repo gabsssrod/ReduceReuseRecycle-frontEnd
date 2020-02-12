@@ -58,18 +58,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
 				},
 				{
-					name: "paolo",
-					material: "plastic",
+					name: "aerosol can",
+					material: "metal",
 					recycle:
-						"Maybe! Make sure any bags you are recycling have a #2 or #4 plastic symbol on them. If not, you can’t be sure what plastic resin the bag is made from, so you’ll want to reuse it instead. Remove anything inside the bags, such as receipts, stickers, or crumbs. All these items will contaminate your bag load. Keep a bag collection bin in your house",
+						"No! These items are considered hazardous waste and should not go in the recycle cart. Take to a Home Chemical Collection Center for safe disposal.",
 					reduce:
-						"The best way to reduce your consumption of plastic bags is by switching over to resuable bags. However, keep in mind that for reusuable bags to make a positive impact you have to keep them for at least 10 years, due to the ammount of resources it takes to make them.",
-					reuse:
-						"You can reuse your plastic bags, for example, the plastic bags you get from the supermaket can be reused! Save the for your next grocery trip.",
+						"Minimize the number of different aerosol products used. Whenever possible, use rechargeable or pump-spray containers or refillable containers that use compressed air as the propellant instead of aerosols.",
+					reuse: "Reuse is not recommended because of the hazardous risk they present.",
 					trash:
-						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
+						"No! These items are considered hazardous waste and should not go in the trash bin. Take to a Home Chemical Collection Center for safe disposal."
+				},
+				{
+					name: "aluminum can",
+					material: "metal",
+					recycle:
+						"Yes! Clean, empty aluminum cans and bottles used for drinks or food such as soda, soup and canned pet food are accepted recyclables.",
+					reduce: "",
+					reuse: "",
+					trash: "No! These items are recycable!"
 				}
 			],
+
 			daysPicked: [
 				{
 					first_day: "",
