@@ -83,12 +83,8 @@ export const Home = () => {
 										natural resources, protect the environment and save money.
 									</small>
 								</p>
-								<div className="card-footer">
-									<Link
-										to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
-										className="text-center">
-										Learn More
-									</Link>
+								<div className="footer text-center">
+									<Link to="https://www.epa.gov/recycle/reducing-and-reusing-basics">Learn More</Link>
 								</div>
 							</div>
 						</div>
@@ -108,19 +104,15 @@ export const Home = () => {
 										then to resort to recycling.
 									</small>
 								</p>
-								<div className="card-footer">
-									<Link
-										to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
-										className="text-center">
-										Learn More
-									</Link>
+								<div className="footer text-center">
+									<Link to="https://www.epa.gov/recycle/reducing-and-reusing-basics">Learn More</Link>
 								</div>
 							</div>
 						</div>
 						<div className="col card cardStyle">
 							<div className="card-body iconCards">
 								<div className="iconCenter">
-									<img src={detergent} className="car" alt="" />
+									<img src={trash} className="car" alt="" />
 								</div>
 								<br />
 								<h6 className="card-subtitle mb-2 text-muted text-center">RECYCLE</h6>
@@ -134,10 +126,8 @@ export const Home = () => {
 									</small>
 								</p>
 							</div>
-							<div className="card-footer">
-								<Link to="https://www.epa.gov/recycle/recycling-basics" className="text-center">
-									Learn More
-								</Link>
+							<div className="footer text-center">
+								<Link to="https://www.epa.gov/recycle/recycling-basics">Learn More</Link>
 							</div>
 						</div>
 					</div>
