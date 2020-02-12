@@ -7,14 +7,6 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import landingImage from "../../img/ladingImage.jpg";
 
 export const Home = () => {
-	let bg = [
-		"https://cdn.pixabay.com/photo/2018/10/11/04/33/vietnam-3738879_1280.jpg",
-		"https://cdn.pixabay.com/photo/2019/11/08/21/42/landscape-4612528_1280.jpg",
-		"https://cdn.pixabay.com/photo/2017/10/10/07/48/hills-2836301_1280.jpg",
-		"https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004_1280.jpg"
-	];
-	let randomImage = Math.floor(Math.random() * bg.length);
-
 	return (
 		<>
 			<div>
@@ -40,13 +32,13 @@ export const Home = () => {
 						<div className="row aboutUsContainer">
 							<div className="container imgContainer col-6">
 								<img
-									src="https://cdn.pixabay.com/photo/2018/04/04/13/38/nature-3289812_1280.jpg"
+									src="https://www.freepngimg.com/thumb/leaf/64620-bin-associate-symbol-recycling-recycle-waste-electronic.png"
 									alt="Avatar"
 									className="gabyPic"
 								/>
 							</div>
 							<div className="container col-6">
-								<h5>About Us</h5>
+								<h5 className="aboutUsTitle">About Us</h5>
 								<p className="aboutUs1">
 									Being mindful means to be conscious or aware of something. At ReMindful we are aware
 									that many people do not know the proper way to recycle. This does not mean that
