@@ -72,12 +72,82 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "aluminum can",
 					material: "metal",
 					recycle:
-						"Yes! Clean, empty aluminum cans and bottles used for drinks or food such as soda, soup and canned pet food are accepted recyclables.",
-					reduce: "",
-					reuse: "",
+						"Yes! Clean, empty aluminum cans used for drinks or food such as soda, soup and canned pet food are accepted recyclables.",
+					reduce: "Ways to reduce may not be so obvious so, try focusing on recycling these items.",
+					reuse:
+						"Reuse your aluminum cans by taking them apart to make candle holders, coasters, jewelry, and belts.",
 					trash: "No! These items are recycable!"
-				}
+				},
+				{
+					name: "cardboard",
+					material: "paper",
+					recycle:
+						"Yes! Clean, dry, empty, flattened packing boxes, cereal boxes, gift boxes and corrugated cardboard boxes are accepted recyclables.",
+					reduce: "Ways to reduce may not be so obvious so, try focusing on recycling these items.",
+					reuse: "These boxes can be used as storage.",
+					trash: "No! These items are recycable!"
+				},
+				{
+					name: "clothing",
+					material: "varied",
+					recycle: "No! Clothing should not be put in the recycling cart.",
+					reduce: "Donate these items to donation centers.",
+					reuse: "Clothing can be cut up and used as cleaning rags.",
+					trash: "Yes! These items should be disposed of with household trash."
+				},
+				{
+					name: "linen",
+					material: "varied",
+					recycle: "No! Linens should not be put in the recycling cart.",
+					reduce: "Donate these items to donation centers.",
+					reuse: "Linen can be cut up and used as cleaning rags.",
+					trash: "Yes! These items should be disposed of with household trash."
+				},
+				{
+					name: "egg carton",
+					material: "Paper, foam, or plastic.",
+					recycle: "Only paper egg cartons can go in the recycle cart.",
+					reduce: "Ways to reduce may not be so obvious so, try focusing on recycling these items.",
+					reuse: "Egg cartons can be reused as bird feeders!",
+					trash: "Foam and plastic egg containers should go in your household trash bin."
+				},
+				{
+					name: "electronics",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center. "
+				},
+				{
+					name: "eyeglasses",
+					material: "varied",
+					recycle:
+						"No! Used eyeglasses or sunglasses for adults or children including reading glasses, bifocals or non-prescription sunglasses (plastic or metal frames) are not accepted recyclables.",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Check with your eye doctor, Goodwill and Salvation Army to donate glasses to people in need.",
+					trash: "Yes! These items are not recycable. Put these items in the trash bin."
+                },
+                {
+					name: "motor oil",
+					material: "oil",
+					recycle:
+						"No! Motor oil should not go in your recycle cart. Take used motor oil to a Home Chemical Collection Center.",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"If taken to a Home Chemical Collection Center oil can be safely recycled or disposed. Recycling used oil keeps it from polluting soil and water.",
+					trash: "No! Motor oil should not go in your trash bin. Take used motor oil to a Home Chemical Collection Center."
+                },
 			],
+
+			// <a src="https://www.bobvila.com/slideshow/17-creative-ways-to-reuse-cardboard-boxes-47420#party-decor">Here are some ideas you can try for a diy project.</a>
 
 			daysPicked: [
 				{
