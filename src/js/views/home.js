@@ -83,11 +83,13 @@ export const Home = () => {
 										natural resources, protect the environment and save money.
 									</small>
 								</p>
-								<Link
-									to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
-									className="text-center">
-									Learn More
-								</Link>
+								<div className="card-footer">
+									<Link
+										to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
+										className="text-center">
+										Learn More
+									</Link>
+								</div>
 							</div>
 						</div>
 						<div className="col card cardStyle">
@@ -106,11 +108,13 @@ export const Home = () => {
 										then to resort to recycling.
 									</small>
 								</p>
-								<Link
-									to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
-									className="text-center">
-									Learn More
-								</Link>
+								<div className="card-footer">
+									<Link
+										to="https://www.epa.gov/recycle/reducing-and-reusing-basics"
+										className="text-center">
+										Learn More
+									</Link>
+								</div>
 							</div>
 						</div>
 						<div className="col card cardStyle">
@@ -120,7 +124,7 @@ export const Home = () => {
 								</div>
 								<br />
 								<h6 className="card-subtitle mb-2 text-muted text-center">RECYCLE</h6>
-								<p className="">
+								<p>
 									<small>
 										Recycling is the process of collecting and processing materials that would otherwise be thrown
 										away as trash and turning them into new products. Recycling is very important as waste has a
@@ -129,6 +133,8 @@ export const Home = () => {
 										waste. Habitat destruction and global warming are some the affects caused by deforestation.
 									</small>
 								</p>
+							</div>
+							<div className="card-footer">
 								<Link to="https://www.epa.gov/recycle/recycling-basics" className="text-center">
 									Learn More
 								</Link>
