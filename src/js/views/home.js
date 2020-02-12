@@ -41,10 +41,10 @@ export const Home = () => {
 						<div className="container col-6">
 							<h6 className="aboutUsTitle">About Us</h6>
 							<h5 className="missionHeading">
-								<b>
+								<div className="titleDiv">
 									on a mission to make an eco conscious lifestyle
 									<br /> easy for everyone
-								</b>
+								</div>
 							</h5>
 							<p className="aboutUs1">
 								<small>
@@ -61,18 +61,21 @@ export const Home = () => {
 			</div>
 			<div className="jumbotron jumbotron3 jumbotron-fluid">
 				<div className="container jumbo3Container">
-					<h1 className="display-4">Fluid jumbotron</h1>
-					<p className="lead">
-						This is a modified jumbotron that occupies the entire horizontal space of its parent.
+					<h1 className="jumbo3Heading display-4">What we focus on</h1>
+					<p className="jumbo3Heading2 lead">
+						The first step to leading a more eco-friendly life is to learn about reducing, reusing, and
+						recycling
 					</p>
-					<div className="row">
+					<div className="row startCard">
 						<div className="col card cardStyle">
 							<div className="card-body iconCards">
 								<div className="iconCenter">
 									<img src={electricCar} className="car" alt="" />
 								</div>
 								<br />
-								<h6 className="card-subtitle mb-2 text-muted text-center">REDUCE</h6>
+								<div className="titleDiv">
+									<h6 className="card-subtitle titleCard mb-2 text-center">REDUCE</h6>
+								</div>
 								<p className="">
 									<small>
 										The most effective way to reduce waste is to not create it in the first place. Making a
@@ -94,7 +97,9 @@ export const Home = () => {
 									<img src={detergent} className="car" alt="" />
 								</div>
 								<br />
-								<h6 className="card-subtitle mb-2 text-muted text-center">REUSE</h6>
+								<div className="titleDiv">
+									<h6 className="card-subtitle titleCard mb-2 text-center">REUSE</h6>
+								</div>
 								<p className="">
 									<small>
 										Reuse is a means to prevent solid waste from entering the landfill, improve our
@@ -115,7 +120,9 @@ export const Home = () => {
 									<img src={trash} className="car" alt="" />
 								</div>
 								<br />
-								<h6 className="card-subtitle mb-2 text-muted text-center">RECYCLE</h6>
+								<div className="titleDiv">
+									<h6 className="card-subtitle titleCard mb-2 text-center">RECYCLE</h6>
+								</div>
 								<p>
 									<small>
 										Recycling is the process of collecting and processing materials that would otherwise be thrown
