@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+
+
 .jumbotron1 {
     background-image: url("https://cdn.pixabay.com/photo/2018/02/18/03/36/mountain-3161467_1280.jpg");
     background-size: cover;
@@ -59,6 +63,8 @@ button{
 
 .landingHeading,.aboutUsTitle{
     color: #a3c962;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px;
 }
 
 .aboutUs1 {
@@ -70,6 +76,26 @@ button{
     text-align: center;
 }
 
+.aboutUs1{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    margin-right: 100px;
+    margin-top: 15px;
+
+}
+
+.secondHeading{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+}
+
+.missionHeading{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+
 .jumbotron3 {
     background-color: #bae6ef;
     // background-image: url(https://cdn.pixabay.com/photo/2015/07/03/14/59/water-830374_960_720.jpg);
@@ -79,8 +105,9 @@ button{
 }
 
 .gabyPic {
-    max-width: 74%;
+    max-width: 65%;
     height: 50%;
+    // margin-left: 85px;
     background-position: center;
 }
 

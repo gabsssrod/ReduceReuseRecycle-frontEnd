@@ -26,7 +26,7 @@ export const Home = () => {
 					<div className="aboutUs">
 						<div className="container aboutUsHeading">
 							<h5 className="landingHeading">What we do</h5>
-							<h2>Mindful for a better future</h2>
+							<h2 className="secondHeading">reMINDFUL FOR A BETTER FUTURE</h2>
 							<br />
 						</div>
 						<div className="row aboutUsContainer">
@@ -38,14 +38,21 @@ export const Home = () => {
 								/>
 							</div>
 							<div className="container col-6">
-								<h5 className="aboutUsTitle">About Us</h5>
+								<h6 className="aboutUsTitle">About Us</h6>
+								<h5 className="missionHeading">
+									<b>
+										on a mission to make an eco conscious lifestyle
+										<br /> easy for everyone
+									</b>
+								</h5>
 								<p className="aboutUs1">
-									Being mindful means to be conscious or aware of something. At ReMindful we are aware
-									that many people do not know the proper way to recycle. This does not mean that
-									people are not interested in recycling. We believe that people would be more likely
-									to recycle if they have the resources available. Our mission is to provide knowledge
-									about recycling in a frictionless manner so that we can provide a smooth and easy
-									recyling experience, and leave a better planet for our children.
+									<small>
+										At reMindful we are aware that many people do not know the proper way to reduce,
+										reuse, recycle. Mostly due to time constrictions. We get it, youre busy. But we
+										believe that people would be more likely to utilize the three Rs if they had the
+										resources readily available. So we decided to build an online community full of
+										resources to make your journy simple and time efficient.
+									</small>
 								</p>
 							</div>
 						</div>
