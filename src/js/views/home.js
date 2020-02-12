@@ -33,36 +33,31 @@ export const Home = () => {
 				</div>
 				<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
 					<div className="aboutUs">
-						<>
-							<h1 className="display-4">Be Mindful</h1>
-							<p className="lead aboutUs1">
-								Being mindful means to be conscious or aware of something. At ReMindful we are aware
-								that many people do not know the proper way to recycle. This does not mean that people
-								are not interested in recycling. We believe that people would be more likely to recycle
-								if they have the resources available. Our mission is to provide knowledge about
-								recycling in a frictionless manner so that we can provide a smooth and easy recyling
-								experience, and leave a better planet for our children.
-							</p>
+						<div className="container aboutUsHeading">
+							<h5 className="landingHeading">What we do</h5>
+							<h2>Mindful for a better future</h2>
 							<br />
-							<div className="row">
-								<div className="container mx-auto col-6">
-									<img
-										src="https://media-exp1.licdn.com/dms/image/C5603AQGVdJBetfpXAQ/profile-displayphoto-shrink_200_200/0?e=1586995200&v=beta&t=hmxrXV1KhJ52LbWNGq9qhU9z6fPACTVlz3pEId-6Dk0"
-										alt="Avatar"
-										className="gabyPic"
-									/>
-									<p className="gabyText">Gabriela Rodriguez, Full Stack Web Developer</p>
-								</div>
-								<div className="container mx-auto col-6">
-									<img
-										src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/6XCFWNCV3EI6TKUDKBHQQ27V2Y.jpg&w=767"
-										alt="Avatar"
-										className="gabyPic"
-									/>
-									<p className="gabyText">Jordan Aguiriano, Full Stack Web Developer</p>
-								</div>
+						</div>
+						<div className="row aboutUsContainer">
+							<div className="container imgContainer col-6">
+								<img
+									src="https://cdn.pixabay.com/photo/2018/04/04/13/38/nature-3289812_1280.jpg"
+									alt="Avatar"
+									className="gabyPic"
+								/>
 							</div>
-						</>
+							<div className="container col-6">
+								<h5>About Us</h5>
+								<p className="aboutUs1">
+									Being mindful means to be conscious or aware of something. At ReMindful we are aware
+									that many people do not know the proper way to recycle. This does not mean that
+									people are not interested in recycling. We believe that people would be more likely
+									to recycle if they have the resources available. Our mission is to provide knowledge
+									about recycling in a frictionless manner so that we can provide a smooth and easy
+									recyling experience, and leave a better planet for our children.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="row">
@@ -114,24 +109,23 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-				<div className="jumbotron5 jumbotron-fluid">
-					<div className="container">
-						<h1 className="display-4">Recycle</h1>
-						<p className="lead">
-							Recycling is the process of collecting and processing materials that would otherwise be
-							thrown away as trash and turning them into new products. Recycling is very important as
-							waste has a huge negative impact on the natural environment. Harmful chemicals and
-							greenhouse gasses are released from rubbish in landfill sites. Recycling helps to reduce the
-							pollution caused by waste. Habitat destruction and global warming are some the affects
-							caused by deforestation.
-						</p>
-						<div className="container mx-auto">
-							<img
-								src="https://cdn.pixabay.com/photo/2018/08/01/11/37/plastic-3577044_960_720.jpg"
-								alt="Avatar"
-								className="recyclePic"
-							/>
-						</div>
+			</div>
+			<div className="jumbotron5 jumbotron-fluid">
+				<div className="container">
+					<h1 className="display-4">Recycle</h1>
+					<p className="lead">
+						Recycling is the process of collecting and processing materials that would otherwise be thrown
+						away as trash and turning them into new products. Recycling is very important as waste has a
+						huge negative impact on the natural environment. Harmful chemicals and greenhouse gasses are
+						released from rubbish in landfill sites. Recycling helps to reduce the pollution caused by
+						waste. Habitat destruction and global warming are some the affects caused by deforestation.
+					</p>
+					<div className="container mx-auto">
+						<img
+							src="https://cdn.pixabay.com/photo/2018/08/01/11/37/plastic-3577044_960_720.jpg"
+							alt="Avatar"
+							className="recyclePic"
+						/>
 					</div>
 				</div>
 			</div>

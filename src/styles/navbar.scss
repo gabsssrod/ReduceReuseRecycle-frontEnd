@@ -45,15 +45,27 @@ button{
 
 
 .jumbotron2 {
-    background-color: #bae6ef;
+    background-color: white;
     height: 800px;
-    text-align: center;
     padding-top: 8%;
 }
 
+
+.aboutUsContainer{
+    margin-top: 5%;
+}
+
+.aboutUsHeading{
+    text-align: center;
+}
+
 .aboutUs1 {
-    margin-left: 10%;
+    margin-left: 5;
     margin-right: 10%;
+}
+
+.imgContainer{
+    text-align: center;
 }
 
 .jumbotron3 {
@@ -65,15 +77,11 @@ button{
 }
 
 .gabyPic {
-    width: 250px;
-    height: 250px;
+    max-width: 74%;
+    height: 50%;
     background-position: center;
-    border-radius: 50%;
 }
 
-.gabyText {
-    padding-top: 2%;
-}
 
 .reducePic {
     width: 250px;
