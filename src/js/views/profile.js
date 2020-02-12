@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-
+import "../../styles//profile.scss";
 import { SearchItem } from "../views/SearchItem";
 import { SearchResult } from "../views/searchResult";
 
@@ -33,7 +33,7 @@ export const Profile = () => {
 				<div className="card-deck mb-4">
 					<div className="card search">
 						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
-						<div className="card-body">
+						<div className="tryinggg card-body cardSearch">
 							<h5 className="card-title">Search Items</h5>
 							<p className="card-text">Search for any item for the easiest way to stay earth friendly.</p>
 							<p className="card-text">
@@ -50,7 +50,7 @@ export const Profile = () => {
 					</div> */}
 					</div>
 
-					<div className="card pick days">
+					<div className="card pick days tryinggg">
 						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="card-body">
 							<h5 className="card-title">Your Pick Up Days</h5>
@@ -120,7 +120,7 @@ export const Profile = () => {
 				{/*PROGRESS AND EVENTS CARDS*/}
 
 				<div className="card-deck mb-4">
-					<div className="card trends">
+					<div className="card trends tryinggg">
 						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="card-body">
 							<h5 className="card-title">Track your trash and monitor your trends!</h5>
@@ -137,7 +137,7 @@ export const Profile = () => {
 					</div>
 					<div className="card events">
 						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
-						<div className="card-body">
+						<div className="card-body tryinggg">
 							<h5 className="card-title">Upcoming Events</h5>
 							<p className="card-text">
 								March 12th, 2020 - Environmental Chemistry and Pollution Control Conference in June 3rd,
