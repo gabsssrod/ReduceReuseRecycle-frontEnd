@@ -1,17 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
-
-
-
-.jumbotron1 {
-    background-image: url("https://cdn.pixabay.com/photo/2018/02/18/03/36/mountain-3161467_1280.jpg");
-    background-size: cover;
-    // color: #fff;
-    height: 800px;
-    text-align: center;
-    margin-top: -73px;
-    padding-top: 16%;
-}
-
 .header1{
     position: fixed;   
     width: 100%;
@@ -30,14 +16,6 @@
     border: solid 1px;
 }
 
-.setDayButton{ 
-    text-align: center;   
-};
-
-.confirmDay{ 
-    text-align: center;  
-};
-
 
 button{
     border-radius: 40px;
@@ -46,120 +24,6 @@ button{
 }
 
 
-.jumbotron2 {
-    background-color: white;
-    height: 800px;
-    padding-top: 8%;
-}
-
-
-.aboutUsContainer{
-    margin-top: 5%;
-}
-
-.aboutUsHeading{
-    text-align: center;
-}
-
-.landingHeading,.aboutUsTitle{
-    color: #a3c962;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 19px;
-}
-
-.aboutUs1 {
-    margin-left: 5;
-    margin-right: 10%;
-}
-
-.imgContainer{
-    text-align: center;
-}
-
-.aboutUs1{
-    font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
-    margin-right: 100px;
-    margin-top: 15px;
-
-}
-
-.secondHeading{
-    font-family: 'Noto Serif JP', serif;
-    font-size: 24px;
-}
-
-.missionHeading{
-    font-family: 'Noto Serif JP', serif;
-    font-size: 22px;
-    margin-top: 15px;
-}
-
-
-.jumbotron3 {
-    background-color: #bae6ef;
-    // background-image: url(https://cdn.pixabay.com/photo/2015/07/03/14/59/water-830374_960_720.jpg);
-    // border-radius: 50%;
-    text-align: center;
-    padding-top: 16%;
-}
-
-.gabyPic {
-    max-width: 65%;
-    height: 50%;
-    // margin-left: 85px;
-    background-position: center;
-}
-
-
-.reducePic {
-    width: 250px;
-    height: 250px;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.reUsePic {
-    width: 250px;
-    height: 250px;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.recyclePic {
-    width: 250px;
-    height: 250px;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.jumbotron33 {
-    background-image: url("https://cdn.pixabay.com/photo/2019/11/06/05/15/uav-4605203_1280.jpg");
-    height: 800px;
-    text-align: center;
-    padding-top: 16%;
-}
-
-.jumbotron4 {
-    background-color: #ffffff;
-    height: 800px;
-    text-align: center;
-    padding-top: 16%;
-}
-
-.jumbotron44 {
-    background-color: #bae6ef;
-    height: 800px;
-    text-align: center;
-    padding-top: 16%;
-}
-
-.jumbotron5 {
-    background-color: #bae6ef;
-    height: 800px;
-    text-align: center;
-    padding-top: 16%;
-}
 .navbar {
     background-color: #f2f0ed;
     opacity: 0.4;

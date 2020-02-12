@@ -1,3 +1,14 @@
+// ----------------- SECTION 1 -------------------
+
+.jumbotron1 {
+    background-image: url("https://cdn.pixabay.com/photo/2018/02/18/03/36/mountain-3161467_1280.jpg");
+    background-size: cover;
+    height: 800px;
+    text-align: center;
+    margin-top: -73px;
+    padding-top: 16%;
+}
+
 .logoName {
     float: left;
     border-radius: 3px;
@@ -5,4 +16,94 @@
 }
 .samir {
     color: white!important
+}
+
+// ----------------- SECTION 2 -------------------
+
+.jumbotron2 {
+    background-color: white;
+    height: 800px;
+    padding-top: 8%;
+}
+
+
+.aboutUsContainer{
+    margin-top: 5%;
+}
+
+.aboutUsHeading{
+    text-align: center;
+}
+
+.landingHeading,.aboutUsTitle{
+    color: #a3c962;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px;
+}
+
+.aboutUs1 {
+    margin-left: 5;
+    margin-right: 10%;
+}
+
+.imgContainer{
+    text-align: center;
+}
+
+.aboutUs1{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    margin-right: 100px;
+    margin-top: 15px;
+
+}
+
+.secondHeading{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+}
+
+.missionHeading{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.gabyPic {
+    max-width: 65%;
+    height: 50%;
+    // margin-left: 85px;
+    background-position: center;
+}
+
+
+// ----------------- SECTION 3 -------------------
+
+.jumbotron3{
+    background-image: url("https://cdn.pixabay.com/photo/2019/11/06/05/15/uav-4605203_1280.jpg");
+    background-size: cover;
+    height: 800px;
+    // margin-top: -73px;
+}
+
+
+.car{
+    height: 20%;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.iconCenter{
+    text-align: center;
+}
+.cardStyle{
+    height: 400px;
+    width: 400px;
+}
+.iconCards{
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
