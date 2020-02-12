@@ -26,7 +26,7 @@ export const Events = () => {
 							// <div className="container " >
 							<div className="col-md-4 card eventsCard tryinggg" key={index}>
 								<Link to={item.eventInfo}>
-									<img src={item.eventImage} className="card-img-top imageSize" alt="..." />
+									<img src={item.eventImage} className="card-img-top imageSize tryinggg1" alt="..." />
 								</Link>
 								<div className="card-body card2">
 									<h5 className="card-title">{item.eventName}</h5>

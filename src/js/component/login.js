@@ -12,6 +12,11 @@ export const Login = () => {
 	return (
 		<div className="login_Background">
 			<div className="container login_Container">
+				<img
+					src="https://www.freepngimg.com/thumb/leaf/64620-bin-associate-symbol-recycling-recycle-waste-electronic.png"
+					alt="Avatar"
+					className="planet PlanetLogIn"
+				/>
 				<div className="container input_Container">
 					<h5 className="mb-3 font-weight-normal" />
 					<label htmlFor="inputEmail" className="sr-only inputSize m-2">

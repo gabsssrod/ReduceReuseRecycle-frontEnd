@@ -10,11 +10,13 @@
     padding-top: 16%;
 }
 .login_Container{
-    height: 400px;
+    height: 500px;
     width: 500px;
     padding: 20px;
+    margin-bottom: 55px;
     background-color: rgba(242, 240, 237, 0.5);
 }
+
 
 .login_input{
     width: 300px;
@@ -36,4 +38,10 @@
 
 .register_Link{
     margin-right: 120px;
+}
+
+.planet{
+    width: 100px;
+    height: 100px;
+    margin: 15px;
 }

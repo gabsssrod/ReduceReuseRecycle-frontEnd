@@ -14,6 +14,11 @@ export const Registration = () => {
 	return (
 		<div className="signin_Background">
 			<div className="container signin_Container">
+				<img
+					src="https://www.freepngimg.com/thumb/leaf/64620-bin-associate-symbol-recycling-recycle-waste-electronic.png"
+					alt="Avatar"
+					className="planet"
+				/>
 				<h5 className="mb-3 font-weight-normal">Sign Up</h5>
 				<div>
 					<div className="col form-group">
