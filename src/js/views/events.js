@@ -24,7 +24,7 @@ export const Events = () => {
 					{store.events.map((item, index) => {
 						return (
 							// <div className="container " >
-							<div className="col-md-4 card eventsCard" key={index}>
+							<div className="col-md-4 card eventsCard tryinggg" key={index}>
 								<Link to={item.eventInfo}>
 									<img src={item.eventImage} className="card-img-top imageSize" alt="..." />
 								</Link>
