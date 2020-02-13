@@ -12,9 +12,9 @@ export const Home = () => {
 	return (
 		<div>
 			<div className="jumbotron1 jumbotron-fluid">
-				<div className="container">
-					<h1 className="display-4">reMINDFUL</h1>
-					<p className="lead">Reduce. Reuse. Recycle. ReMindful.</p>
+				<div className="container jumbo1Container">
+					<h1 className="display-4 siteTitle">reMINDFUL</h1>
+					<p className="lead siteSlogan">Reduce. Reuse. Recycle. ReMindful.</p>
 					<Link to="/profile">
 						<button className="btn2 btn mx-1 samir">Lets Begin!</button>
 					</Link>
