@@ -133,8 +133,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Check with your eye doctor, Goodwill and Salvation Army to donate glasses to people in need.",
 					trash: "Yes! These items are not recycable. Put these items in the trash bin."
-                },
-                {
+				},
+				{
 					name: "motor oil",
 					material: "oil",
 					recycle:
@@ -143,8 +143,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
 					reuse:
 						"If taken to a Home Chemical Collection Center oil can be safely recycled or disposed. Recycling used oil keeps it from polluting soil and water.",
-					trash: "No! Motor oil should not go in your trash bin. Take used motor oil to a Home Chemical Collection Center."
-                },
+					trash:
+						"No! Motor oil should not go in your trash bin. Take used motor oil to a Home Chemical Collection Center."
+				},
+				{
+					name: "paper",
+					material: "paper",
+					recycle:
+						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables",
+					reduce:
+						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files.",
+					reuse:
+						"Use both sides of the paper. Cut off unused portions of paper to use as bookmarks. Use it as packing material.",
+					trash: "No! These items should be recycled."
+				},
+				{
+					name: "zip lock bags",
+					material: "plastic film",
+					recycle: "No! Zip lock bags are not accepted recyclables.",
+					reduce:
+						"Think before you buy! Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
+					trash: "Yes! Zip lock bags should be placed in your household trash bin."
+				}
 			],
 
 			// <a src="https://www.bobvila.com/slideshow/17-creative-ways-to-reuse-cardboard-boxes-47420#party-decor">Here are some ideas you can try for a diy project.</a>
