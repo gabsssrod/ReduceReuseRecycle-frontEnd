@@ -38,7 +38,7 @@ export const Single = props => {
 					<hr className="my-4" />
 
 					<Link to="/profile">
-						<button className="btn mx-auto" href="#" role="button">
+						<button className="btn" href="#" role="button">
 							Back to profile
 						</button>
 					</Link>
