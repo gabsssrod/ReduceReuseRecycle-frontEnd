@@ -58,7 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reduce:
 						"The best way to reduce your consumption of plastic bags is by switching over to resuable bags. However, keep in mind that for reusuable bags to make a positive impact you have to keep them for at least 10 years, due to the ammount of resources it takes to make them.",
 					reuse:
-						"You can reuse your plastic bags, for example, the plastic bags you get from the supermaket can be reused! Save the for your next grocery trip.",
+						"The plastic bags you get from the supermaket can be reused! Save them for your next grocery trip.",
 					trash:
 						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
 				},
@@ -126,7 +126,55 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
 					trash:
-						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center. "
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "computer",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "phone",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "cd player",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "television",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
 				},
 				{
 					name: "eyeglasses",
@@ -155,12 +203,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "paper",
 					material: "paper",
 					recycle:
-						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables",
+						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables. Paper must also be seperated from plastics and glass in order to be recycled properly. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
 					reduce:
-						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files.",
+						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files. When given the choice opt for online receipts.",
 					reuse:
 						"Use both sides of the paper. Cut off unused portions of paper to use as bookmarks. Use it as packing material.",
-					trash: "No! These items should be recycled."
+					trash: "No! These items should be recycled unless they are crumbled or wet."
+				},
+				{
+					name: "newspaper",
+					material: "paper",
+					recycle:
+						"Yes! Newspapers are one of the easiest items to recycle. Doing so can help to save up to 60 percent of the energy required to make brand new newsprint. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
+					reduce:
+						"Most newspaper companies are now available online. This option is a great way to reduce your use of newspapers.",
+					reuse: "Use it as packing material.",
+					trash: "No! These items should be recycled unless they are crumbled or wet."
 				},
 				{
 					name: "zip lock bags",
@@ -171,6 +229,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
 					trash: "Yes! Zip lock bags should be placed in your household trash bin."
+				},
+				{
+					name: "receipts",
+					material: "paper",
+					recycle:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and cannot be recycled. However, if the receipt is on plain paper and has a matte finish, it can be recycled. Please recycle in the paper bin!",
+					reduce:
+						"You can ask stores to email you a receipt instead of printing one out on paper. This will save you the trouble of having to sort through a massive pile of receipts later on—and it will help the retailer conserve paper, too!",
+					reuse:
+						"Sadly, its not that practical to reuse receipts, but we are always open to new ideas! Try focusing on properly disposing.",
+					trash:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and should be disposed in the trash."
 				}
 			],
 
@@ -266,7 +336,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				localStorage.setItem("lastname", "");
 			},
 			signin: (userEmail, userPassword) => {
-				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/login";
+				let url = "https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/login";
 
 				fetch(url, {
 					method: "POST",
@@ -298,7 +368,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_user";
+				let url = "https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/add_user";
 
 				fetch(url, {
 					method: "POST",
@@ -317,7 +387,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addDays: (dayOne, dayTwo) => {
-				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_days";
+				let url = "https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/add_days";
 				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
@@ -329,7 +399,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						user_id: userId
 					})
 				}).then(() => {
-					let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/get_days";
+					let url = "https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/get_days";
 
 					fetch(url, {
 						method: "POST",
@@ -343,6 +413,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({ ...getStore, daysPicked: data });
 						});
 				});
+			},
+
+			sendMsg: sms => {
+				fetch("https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/sendmsg", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({ message: sms })
+				}).catch(err => console.log("sendMsg ERROR:", err));
 			},
 
 			changeColor: (index, color) => {

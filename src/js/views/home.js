@@ -112,7 +112,7 @@ export const Home = () => {
 								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">REUSE</h6>
 								</div>
-								<p className="">
+								<p className="text-center">
 									<small>
 										Reuse is a means to prevent solid waste from entering the landfill, improve our
 										communities, and increase the material, educational and occupational wellbeing of our
@@ -137,7 +137,7 @@ export const Home = () => {
 								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">RECYCLE</h6>
 								</div>
-								<p>
+								<p className="text-center">
 									<small>
 										Recycling is the process of collecting and processing materials that would otherwise be thrown
 										away as trash and turning them into new products. Recycling is very important as waste has a

@@ -15,8 +15,15 @@ export const Profile = () => {
 	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
+
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
+
+	const [button1, setButton1] = useState("block");
+	const [collapse1, setCollapse1] = useState("d-none");
+
+	const [notificationDay, setnotificationDay] = useState();
+	const [notificationDay2, setnotificationDay2] = useState();
 
 	let userId = localStorage.getItem("userID");
 
@@ -25,13 +32,26 @@ export const Profile = () => {
 		setButton("d-none");
 	};
 
+	const collapseHandler1 = () => {
+		setCollapse1("block");
+		setButton1("d-none");
+	};
+
 	const confirmDays = () => {
 		setCollapse("d-none");
 		setButton("block");
 		actions.addDays(pickDay, pickday2);
 	};
 
+	const confirmNotification = () => {
+		setCollapse1("d-none");
+		setButton1("block");
+		actions.sendMsg();
+	};
+
 	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+	let daysNotify = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
 		<div className="zxz">
@@ -39,7 +59,7 @@ export const Profile = () => {
 				<div className="card-deck mb-4">
 					<div className="card search">
 						<div className="tryinggg card-body cardSearch">
-							<img src={loupe} className="map" alt="" />
+							<img src={loupe} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Search Items</h5>
 							<p className="card-text profileTitle">
 								Search for any item for the easiest way to stay earth friendly.
@@ -60,7 +80,7 @@ export const Profile = () => {
 
 					<div className="card pick days tryinggg">
 						<div className="card-body">
-							<img src={calendar} className="map" alt="" />
+							<img src={calendar} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Your Pick Up Days</h5>
 							<div className={collapse}>
 								<div className="select">
@@ -98,6 +118,45 @@ export const Profile = () => {
 								</div>
 							</div>
 
+							{/* ------------NOTIFICATION---------------- */}
+							<div className={collapse1}>
+								<div className="select">
+									<select
+										className="form-control form-control-sm profileTitle"
+										onChange={e => setnotificationDay(e.target.value)}>
+										<option>when do you want to be notified: day 1</option>
+										{daysNotify.map((item, index) => {
+											return (
+												<option key={index} value={item}>
+													{item}
+												</option>
+											);
+										})}
+									</select>
+									<br />
+									<select
+										className="form-control form-control-sm profileTitle"
+										onChange={e => setnotificationDay2(e.target.value)}>
+										<option>when do you want to be notified: day 2</option>
+										{daysNotify.map((item, index) => {
+											return (
+												<option key={index} value={item}>
+													{item}
+												</option>
+											);
+										})}
+									</select>
+									<br />
+									<div className="confirmDay">
+										<button className="btn2 btn-light profileTitle" onClick={confirmNotification}>
+											Notify me on these days!
+										</button>
+									</div>
+								</div>
+							</div>
+
+							{/* ------------END NOTIFICATION----------------  */}
+
 							<div className="map days container">
 								<div className="map days text-center">
 									{!store.daysPicked && !userId
@@ -116,6 +175,9 @@ export const Profile = () => {
 								<button className={button} onClick={collapseHandler}>
 									Set Days
 								</button>
+								<button className={button1} onClick={collapseHandler1}>
+									Set Notifications
+								</button>
 							</div>
 						</div>
 						{/* <div className="card-footer">
@@ -129,7 +191,7 @@ export const Profile = () => {
 				<div className="card-deck mb-4">
 					<div className="card trends tryinggg">
 						<div className="card-body">
-							<img src={linechart} className="map" alt="" />
+							<img src={linechart} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Track your trash and monitor your trends!</h5>
 							<p className="card-text profileTitle">See your progress here!</p>
 							<Link to="/progress">
@@ -144,7 +206,7 @@ export const Profile = () => {
 					</div>
 					<div className="card events">
 						<div className="card-body tryinggg">
-							<img src={map} className="map" alt="" />
+							<img src={map} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Upcoming Events</h5>
 							<p className="card-text profileTitle">
 								March 12th, 2020 - Environmental Chemistry and Pollution Control Conference in June 3rd,
