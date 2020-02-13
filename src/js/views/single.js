@@ -6,9 +6,9 @@ import "../../styles//single.scss";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="jumbotron">
-			<div className="card" style={{ width: "18rem" }}>
-				<div className="card-body jumbotron5 mx-auto">
+		<div className="jumbotron itemJumbotron">
+			<div className="card mx-auto itemCard">
+				<div className="card-body">
 					<h1 className="display-4">{store.searchResults[props.match.params.theid].name}</h1>
 
 					<h3>
@@ -36,12 +36,12 @@ export const Single = props => {
 					<p>{store.searchResults[props.match.params.theid].trash}</p>
 
 					<hr className="my-4" />
-					{/* 
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link> */}
+
+					<Link to="/profile">
+						<button className="btn mx-auto" href="#" role="button">
+							Back to profile
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
