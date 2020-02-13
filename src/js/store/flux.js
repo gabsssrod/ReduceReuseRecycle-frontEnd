@@ -145,6 +145,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"If taken to a Home Chemical Collection Center oil can be safely recycled or disposed. Recycling used oil keeps it from polluting soil and water.",
 					trash:
 						"No! Motor oil should not go in your trash bin. Take used motor oil to a Home Chemical Collection Center."
+				},
+				{
+					name: "paper",
+					material: "paper",
+					recycle:
+						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables",
+					reduce:
+						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files.",
+					reuse:
+						"Use both sides of the paper. Cut off unused portions of paper to use as bookmarks. Use it as packing material.",
+					trash: "No! These items should be recycled."
+				},
+				{
+					name: "zip lock bags",
+					material: "plastic film",
+					recycle: "No! Zip lock bags are not accepted recyclables.",
+					reduce:
+						"Think before you buy! Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
+					trash: "Yes! Zip lock bags should be placed in your household trash bin."
 				}
 			],
 
