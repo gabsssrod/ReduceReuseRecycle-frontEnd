@@ -150,12 +150,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "paper",
 					material: "paper",
 					recycle:
-						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables",
+						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables. Paper must also be seperated from plastics and glass in order to be recycled properly. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
 					reduce:
-						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files.",
+						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files. When given the choice opt for online receipts.",
 					reuse:
 						"Use both sides of the paper. Cut off unused portions of paper to use as bookmarks. Use it as packing material.",
-					trash: "No! These items should be recycled."
+					trash: "No! These items should be recycled unless they are crumbled or wet."
+				},
+				{
+					name: "newspaper",
+					material: "paper",
+					recycle:
+						"Yes! Newspapers are one of the easiest items to recycle. Doing so can help to save up to 60 percent of the energy required to make brand new newsprint. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
+					reduce:
+						"Most newspaper companies are now available online. This option is a great way to reduce your use of newspapers.",
+					reuse: "Use it as packing material.",
+					trash: "No! These items should be recycled unless they are crumbled or wet."
 				},
 				{
 					name: "zip lock bags",
