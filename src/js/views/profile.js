@@ -9,6 +9,7 @@ import "../../styles//profile.scss";
 import calendar from "../../img/calendar.png";
 import loupe from "../../img/loupe.png";
 import map from "../../img/map.png";
+import linechart from "../../img/line-chart.png";
 
 export const Profile = () => {
 	const { store, actions } = useContext(Context);
@@ -39,8 +40,10 @@ export const Profile = () => {
 					<div className="card search">
 						<div className="tryinggg card-body cardSearch">
 							<img src={loupe} className="map" alt="" />
-							<h5 className="card-title">Search Items</h5>
-							<p className="card-text">Search for any item for the easiest way to stay earth friendly.</p>
+							<h5 className="card-title profileTitle">Search Items</h5>
+							<p className="card-text profileTitle">
+								Search for any item for the easiest way to stay earth friendly.
+							</p>
 							<p className="card-text">
 								<div className="search">
 									<div className="search1 form-inline">
@@ -58,11 +61,11 @@ export const Profile = () => {
 					<div className="card pick days tryinggg">
 						<div className="card-body">
 							<img src={calendar} className="map" alt="" />
-							<h5 className="card-title">Your Pick Up Days</h5>
+							<h5 className="card-title profileTitle">Your Pick Up Days</h5>
 							<div className={collapse}>
 								<div className="select">
 									<select
-										className="select1 form-control form-control-sm"
+										className="select1 form-control form-control-sm profileTitle"
 										onChange={e => setPickDay(e.target.value)}>
 										<option>Select your first pick up day</option>
 										{days.map((item, index) => {
@@ -75,7 +78,7 @@ export const Profile = () => {
 									</select>
 									<br />
 									<select
-										className="select2 form-control form-control-sm"
+										className="select2 form-control form-control-sm profileTitle"
 										onChange={e => setPickDay2(e.target.value)}>
 										<option>Select your second pick up day</option>
 										{days.map((item, index) => {
@@ -88,7 +91,7 @@ export const Profile = () => {
 									</select>
 									<br />
 									<div className="confirmDay">
-										<button className="btn2 btn-light" onClick={confirmDays}>
+										<button className="btn2 btn-light profileTitle" onClick={confirmDays}>
 											Confirm Days
 										</button>
 									</div>
@@ -125,12 +128,12 @@ export const Profile = () => {
 
 				<div className="card-deck mb-4">
 					<div className="card trends tryinggg">
-						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="card-body">
-							<h5 className="card-title">Track your trash and monitor your trends!</h5>
-							<p className="card-text">See your progress here!</p>
+							<img src={linechart} className="map" alt="" />
+							<h5 className="card-title profileTitle">Track your trash and monitor your trends!</h5>
+							<p className="card-text profileTitle">See your progress here!</p>
 							<Link to="/progress">
-								<button className="btn2" role="button">
+								<button className="btn2 profileTitle" role="button">
 									lets take a look at your progress!
 								</button>
 							</Link>
@@ -142,13 +145,13 @@ export const Profile = () => {
 					<div className="card events">
 						<div className="card-body tryinggg">
 							<img src={map} className="map" alt="" />
-							<h5 className="card-title">Upcoming Events</h5>
-							<p className="card-text">
+							<h5 className="card-title profileTitle">Upcoming Events</h5>
+							<p className="card-text profileTitle">
 								March 12th, 2020 - Environmental Chemistry and Pollution Control Conference in June 3rd,
 								2020 - AERE Annual Summer Conference
 							</p>
 							<Link to="/events">
-								<button className="btn2" role="button">
+								<button className="btn2 profileTitle" role="button">
 									Search More Events
 								</button>
 							</Link>

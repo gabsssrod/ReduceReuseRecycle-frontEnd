@@ -1,7 +1,7 @@
 .zxz {
    background-image: url("https://cdn.pixabay.com/photo/2016/01/19/17/51/pine-trees-1149943_1280.jpg");
     background-size: cover;
-    height: 900px;
+    height: 1000px;
     text-align: center;
     margin-top: -75px;
     padding-top: 10%;
@@ -26,7 +26,11 @@
 };
 
 .map{
-    width: 15%;
+    width: 10%;
     margin-bottom: 5%;
     margin-top: 5%;
+}
+
+.profileTitle{
+    font-family: 'Noto Serif JP', serif;
 }
