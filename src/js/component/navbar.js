@@ -38,14 +38,14 @@ export const Navbar = () => {
 				</ul>
 				{store.token != undefined ? (
 					<Link to="/">
-						<button onClick={() => actions.logout()} className="btn2 btn mx-1 samir">
+						<li onClick={() => actions.logout()} className="nav-link">
 							Logout
-						</button>
+						</li>
 					</Link>
 				) : (
 					store.token == null && (
 						<Link to="/login">
-							<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
+							<li className="nav-link">Login</li>
 						</Link>
 					)
 				)}

@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reduce:
 						"The best way to reduce your consumption of plastic bags is by switching over to resuable bags. However, keep in mind that for reusuable bags to make a positive impact you have to keep them for at least 10 years, due to the ammount of resources it takes to make them.",
 					reuse:
-						"You can reuse your plastic bags, for example, the plastic bags you get from the supermaket can be reused! Save the for your next grocery trip.",
+						"The plastic bags you get from the supermaket can be reused! Save them for your next grocery trip.",
 					trash:
 						"As a last resort! If your plastic bag is not a #2 or #4, after getting as much use of it as possible, you will need to trash it."
 				},
