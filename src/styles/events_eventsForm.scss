@@ -1,5 +1,6 @@
 .eventsContainer {
-    // width: 730px;
+    width: 730px;
+    background: white
 }
 
 .eventFormTitle{
@@ -40,4 +41,17 @@
 .card2{
     position: absolute;
     top:32%;
+}
+
+.PlanetEventForm{
+    height: 100px;
+    width: 100px;
+    margin-left: 40%;
+    margin-right: 45%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form-text{
+    font-family: 'Noto Serif JP', serif;
 }
