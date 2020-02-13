@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 import "../../styles/navbar.scss";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<>
 			<nav className="navbar navbar-expand-md navbar-light fixed-top">
@@ -34,6 +36,19 @@ export const Navbar = () => {
 						</Link>
 					</li>
 				</ul>
+				{store.token != undefined ? (
+					<Link to="/">
+						<button onClick={() => actions.logout()} className="btn2 btn mx-1 samir">
+							Logout
+						</button>
+					</Link>
+				) : (
+					store.token == null && (
+						<Link to="/login">
+							<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
+						</Link>
+					)
+				)}
 			</nav>
 		</>
 	);

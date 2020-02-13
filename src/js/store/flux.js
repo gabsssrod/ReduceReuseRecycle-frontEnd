@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			searchResults: [],
+			token: null,
 			demo: [
 				{
 					title: "FIRST",
@@ -239,8 +240,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// let search = store.materials.filter((item)=> item.name == input)
 				setStore({ searchResults: store.materials.filter(item => item.name.includes(input)) });
 			},
+			logout: () => {
+				setStore({ token: null, searchResults: null });
+				localStorage.setItem("token", "");
+				localStorage.setItem("userID", "");
+				localStorage.setItem("email", "");
+				localStorage.setItem("firstname", "");
+				localStorage.setItem("lastname", "");
+			},
 			signin: (userEmail, userPassword) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/login";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/login";
 
 				fetch(url, {
 					method: "POST",
@@ -260,6 +269,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (!email && !first_name && !last_name) {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 						} else {
+							setStore({ token: token });
 							localStorage.setItem("token", token);
 							localStorage.setItem("userID", id);
 							localStorage.setItem("email", email);
@@ -271,7 +281,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/add_user";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_user";
 
 				fetch(url, {
 					method: "POST",
@@ -290,7 +300,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addDays: (dayOne, dayTwo) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/add_days";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_days";
 				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
@@ -302,7 +312,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						user_id: userId
 					})
 				}).then(() => {
-					let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/get_days";
+					let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/get_days";
 
 					fetch(url, {
 						method: "POST",

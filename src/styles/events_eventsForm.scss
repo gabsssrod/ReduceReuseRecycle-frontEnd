@@ -9,16 +9,18 @@
     height: 140px;
 }
 
-
+.card{
+    border-radius: 1.25rem;
+}
 .eventsCard1{
     margin-top: 10px;
 }
     
 .eventsCard{
-    border-radius: 0 !important;
+    
     border: none;
     // border-color: lightgray;
-    width: 20%;
+    width: 100%;
     // max-width: 150px;
     height: 450px;
     padding: 0px;
@@ -31,8 +33,9 @@
     width: 100%;
     height: 30%;
     margin-left: 0;
-    padding: 7px;
+    border-radius: 1.25rem 1.5rem 0 0;
 }
+
 .fa-plus-circle{
     color: white;
     margin-left: 10px;

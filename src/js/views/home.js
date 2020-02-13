@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import "../../styles/navbar.scss";
+import { Context } from "../store/appContext";
 
 import rigoImage from "../../img/rigo-baby.jpg";
 import electricCar from "../../img/electricCar.png";
@@ -9,6 +10,7 @@ import detergent from "../../img/detergent.png";
 import trash from "../../img/trash.png";
 
 export const Home = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<div>
 			<div className="jumbotron1 jumbotron-fluid">
@@ -18,9 +20,17 @@ export const Home = () => {
 					<Link to="/profile">
 						<button className="btn2 btn mx-1 samir">Lets Begin!</button>
 					</Link>
-					<Link to="/login">
-						<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
-					</Link>
+					{store.token != null ? (
+						<button onClick={() => actions.logout()} className="btn2 btn mx-1 samir">
+							Logout
+						</button>
+					) : (
+						store.token == null && (
+							<Link to="/login">
+								<button className="btn2 btn mx-1 samir">Login (to track Progress)</button>
+							</Link>
+						)
+					)}
 				</div>
 			</div>
 			<div className="jumbotron2 jumbotron-fluid" id="earthInfo">
@@ -76,7 +86,7 @@ export const Home = () => {
 								<div className="iconTitle">
 									<h6 className="card-subtitle titleCard mb-2 text-center">REDUCE</h6>
 								</div>
-								<p className="">
+								<div className="text-center">
 									<small>
 										The most effective way to reduce waste is to not create it in the first place. Making a
 										new product requires a lot of materials and energy.
@@ -85,14 +95,16 @@ export const Home = () => {
 										be sold. As a result, reduction and reuse are the most effective ways you can save
 										natural resources, protect the environment and save money.
 									</small>
-								</p>
-								<div className="footer text-center">
-									<Link to="https://www.epa.gov/recycle/reducing-and-reusing-basics">Learn More</Link>
 								</div>
+							</div>
+							<div className="card-footer border-0 bg-transparent text-center">
+								<a href="https://www.epa.gov/recycle/reducing-and-reusing-basics">
+									<div className="btn btn-info">Learn More</div>
+								</a>
 							</div>
 						</div>
 						<div className="col card cardStyle">
-							<div className="card-body iconCards">
+							<div className="card-body iconCards h-75">
 								<div className="iconCenter">
 									<img src={detergent} className="car" alt="" />
 								</div>
@@ -109,9 +121,11 @@ export const Home = () => {
 										then to resort to recycling.
 									</small>
 								</p>
-								<div className="footer text-center">
-									<Link to="https://www.epa.gov/recycle/reducing-and-reusing-basics">Learn More</Link>
-								</div>
+							</div>
+							<div className="card-footer border-0 bg-transparent text-center">
+								<a href="https://www.epa.gov/recycle/reducing-and-reusing-basics">
+									<div className="btn btn-info">Learn More</div>
+								</a>
 							</div>
 						</div>
 						<div className="col card cardStyle">
@@ -133,8 +147,10 @@ export const Home = () => {
 									</small>
 								</p>
 							</div>
-							<div className="footer text-center">
-								<Link to="https://www.epa.gov/recycle/recycling-basics">Learn More</Link>
+							<div className="card-footer border-0 bg-transparent text-center">
+								<a href="https://www.epa.gov/recycle/reducing-and-reusing-basics">
+									<div className="btn btn-info">Learn More</div>
+								</a>
 							</div>
 						</div>
 					</div>
