@@ -1,9 +1,14 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import "../../styles//profile.scss";
 import { SearchItem } from "../views/SearchItem";
 import { SearchResult } from "../views/searchResult";
+
+import "../../styles//profile.scss";
+
+import calendar from "../../img/calendar.png";
+import loupe from "../../img/loupe.png";
+import map from "../../img/map.png";
 
 export const Profile = () => {
 	const { store, actions } = useContext(Context);
@@ -32,8 +37,8 @@ export const Profile = () => {
 			<div className="container m-5 mx-auto">
 				<div className="card-deck mb-4">
 					<div className="card search">
-						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="tryinggg card-body cardSearch">
+							<img src={loupe} className="map" alt="" />
 							<h5 className="card-title">Search Items</h5>
 							<p className="card-text">Search for any item for the easiest way to stay earth friendly.</p>
 							<p className="card-text">
@@ -51,10 +56,9 @@ export const Profile = () => {
 					</div>
 
 					<div className="card pick days tryinggg">
-						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="card-body">
+							<img src={calendar} className="map" alt="" />
 							<h5 className="card-title">Your Pick Up Days</h5>
-
 							<div className={collapse}>
 								<div className="select">
 									<select
@@ -136,8 +140,8 @@ export const Profile = () => {
 					</div> */}
 					</div>
 					<div className="card events">
-						{/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
 						<div className="card-body tryinggg">
+							<img src={map} className="map" alt="" />
 							<h5 className="card-title">Upcoming Events</h5>
 							<p className="card-text">
 								March 12th, 2020 - Environmental Chemistry and Pollution Control Conference in June 3rd,
