@@ -1,6 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			weight: {
+				msg: "",
+				info: 1.258
+			},
 			searchResults: [],
 			token: null,
 			demo: [
@@ -234,6 +238,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 
 		actions: {
+			emptyTrash: () => {
+				setTimeout(() => setStore({ weight: { msg: "", info: 0 } }), 2000);
+			},
+
+			getWeight: () => {
+				let store = getStore();
+				// fetch("http://192.168.11.88:3000/remainder")
+				// 	.then(res => res.json())
+				// 	.then(data => {
+				// 		console.log("clicked"), setStore({ weight: data });
+				// 	});
+				setTimeout(() => setStore({ weight: { msg: "", info: store.weight.info + 2.467 } }), 2000);
+			},
 			search: input => {
 				console.log("search", input);
 				const store = getStore();
