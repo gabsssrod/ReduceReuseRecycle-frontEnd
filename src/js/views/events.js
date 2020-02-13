@@ -9,7 +9,7 @@ export const Events = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<>
+		<div className="Jumbotron jumboEvents">
 			<div className="eventsHeader text-center mt-5">
 				<h2>EVENTS</h2>
 			</div>
@@ -24,26 +24,30 @@ export const Events = () => {
 					{store.events.map((item, index) => {
 						return (
 							// <div className="container " >
-							<div className="col-md-4 card eventsCard tryinggg" key={index}>
-								<Link to={item.eventInfo}>
-									<img src={item.eventImage} className="card-img-top imageSize tryinggg1" alt="..." />
-								</Link>
-								<div className="card-body card2">
-									<h5 className="card-title">{item.eventName}</h5>
-									<p className="card-text">
-										{item.eventDate}-{item.eventLocation}
-									</p>
-									<p>
-										<small>{item.eventdescription}</small>
-									</p>
+							<div className="col-md-4 " key={index}>
+								<div className="card eventText eventsCard tryinggg">
+									<Link to={item.eventInfo}>
+										<img
+											src={item.eventImage}
+											className="card-img-top imageSize tryinggg1"
+											alt="..."
+										/>
+									</Link>
+									<div className="card-body card2">
+										<h5 className="card-title eventText">{item.eventName}</h5>
+										<p className="card-text eventText">
+											{item.eventDate}-{item.eventLocation}
+										</p>
+										<p className="eventText">
+											<small>{item.eventdescription}</small>
+										</p>
+									</div>
 								</div>
 							</div>
-							// </div>
 						);
 					})}
 				</div>
 			</div>
-			{/* </div> */}
-		</>
+		</div>
 	);
 };

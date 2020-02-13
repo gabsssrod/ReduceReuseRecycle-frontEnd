@@ -48,9 +48,11 @@ export const Login = () => {
 							<input type="checkbox" defaultValue="remember-me" /> Remember me
 						</label>
 					</div>
-					<button className="login_btn" onClick={() => actions.signin(email, password)} type="submit">
-						Login
-					</button>
+					<Link to="/profile">
+						<button className="login_btn" onClick={() => actions.signin(email, password)} type="submit">
+							Login
+						</button>
+					</Link>
 					<p>
 						<small className="register_Link">Register</small>
 						<small>Forgot your password?</small>

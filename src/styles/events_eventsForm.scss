@@ -1,6 +1,15 @@
-.eventsContainer {
-    width: 730px;
-    background: white
+// .jumboEvents{
+//     background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+//     background-size: cover;
+//     height: 1500px;
+//     margin-top: -75px;
+//     padding-top: 10%;
+
+// }
+
+.eventsHeader{
+    color: #a3c962;
+    font-family: 'Noto Serif JP', serif;
 }
 
 .eventFormTitle{
@@ -9,21 +18,32 @@
     height: 140px;
 }
 
-
+.card{
+    border-radius: 1.25rem;
+}
 .eventsCard1{
     margin-top: 10px;
 }
     
 .eventsCard{
-    border-radius: 0 !important;
     border: none;
-    // border-color: lightgray;
-    width: 20%;
-    // max-width: 150px;
+    width: 100%;
     height: 450px;
     padding: 0px;
     margin: 2%;
     
+}
+
+.eventText{
+     font-family: 'Noto Serif JP', serif;
+}
+
+.eventButton{
+    margin-left: 3%;
+}
+
+.fas{
+    color: #a3c962 !important;
 }
     
 .imageSize{
@@ -31,8 +51,9 @@
     width: 100%;
     height: 30%;
     margin-left: 0;
-    padding: 7px;
+    border-radius: 1.25rem 1.3rem 0 0;
 }
+
 .fa-plus-circle{
     color: white;
     margin-left: 10px;

@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			searchResults: [],
+			token: null,
 			demo: [
 				{
 					title: "FIRST",
@@ -121,7 +122,55 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
 					trash:
-						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center. "
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "computer",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "phone",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "cd player",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "television",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
 				},
 				{
 					name: "eyeglasses",
@@ -176,6 +225,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
 					trash: "Yes! Zip lock bags should be placed in your household trash bin."
+				},
+				{
+					name: "receipts",
+					material: "paper",
+					recycle:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and cannot be recycled. However, if the receipt is on plain paper and has a matte finish, it can be recycled. Please recycle in the paper bin!",
+					reduce:
+						"You can ask stores to email you a receipt instead of printing one out on paper. This will save you the trouble of having to sort through a massive pile of receipts later on—and it will help the retailer conserve paper, too!",
+					reuse:
+						"Sadly, its not that practical to reuse receipts, but we are always open to new ideas! Try focusing on properly disposing.",
+					trash:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and should be disposed in the trash."
 				}
 			],
 
@@ -249,8 +310,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// let search = store.materials.filter((item)=> item.name == input)
 				setStore({ searchResults: store.materials.filter(item => item.name.includes(input)) });
 			},
+			logout: () => {
+				setStore({ token: null, searchResults: null });
+				localStorage.setItem("token", "");
+				localStorage.setItem("userID", "");
+				localStorage.setItem("email", "");
+				localStorage.setItem("firstname", "");
+				localStorage.setItem("lastname", "");
+			},
 			signin: (userEmail, userPassword) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/login";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/login";
 
 				fetch(url, {
 					method: "POST",
@@ -270,6 +339,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (!email && !first_name && !last_name) {
 							alert("Sorry we couldn't find an account with that email. Try to register first.! error");
 						} else {
+							setStore({ token: token });
 							localStorage.setItem("token", token);
 							localStorage.setItem("userID", id);
 							localStorage.setItem("email", email);
@@ -281,7 +351,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			registration: (userFirstName, userLastName, userEmail, userPassword) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/add_user";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_user";
 
 				fetch(url, {
 					method: "POST",
@@ -300,7 +370,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addDays: (dayOne, dayTwo) => {
-				let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/add_days";
+				let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/add_days";
 				let userId = localStorage.getItem("userID");
 
 				fetch(url, {
@@ -312,7 +382,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						user_id: userId
 					})
 				}).then(() => {
-					let url = "https://3000-a38d8935-3b54-4171-8ee2-d7473a44e118.ws-us02.gitpod.io/get_days";
+					let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/get_days";
 
 					fetch(url, {
 						method: "POST",
