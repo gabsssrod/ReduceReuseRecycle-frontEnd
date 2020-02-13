@@ -22,7 +22,7 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			let url = "https://3000-edfbb56f-0ae5-43ed-a401-89f784e78e29.ws-us02.gitpod.io/get_days";
+			let url = "https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/get_days";
 			fetch(url, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },

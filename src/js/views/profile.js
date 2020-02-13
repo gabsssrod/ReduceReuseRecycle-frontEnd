@@ -39,7 +39,7 @@ export const Profile = () => {
 				<div className="card-deck mb-4">
 					<div className="card search">
 						<div className="tryinggg card-body cardSearch">
-							<img src={loupe} className="map" alt="" />
+							<img src={loupe} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Search Items</h5>
 							<p className="card-text profileTitle">
 								Search for any item for the easiest way to stay earth friendly.
@@ -60,7 +60,7 @@ export const Profile = () => {
 
 					<div className="card pick days tryinggg">
 						<div className="card-body">
-							<img src={calendar} className="map" alt="" />
+							<img src={calendar} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Your Pick Up Days</h5>
 							<div className={collapse}>
 								<div className="select">
@@ -129,7 +129,7 @@ export const Profile = () => {
 				<div className="card-deck mb-4">
 					<div className="card trends tryinggg">
 						<div className="card-body">
-							<img src={linechart} className="map" alt="" />
+							<img src={linechart} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Track your trash and monitor your trends!</h5>
 							<p className="card-text profileTitle">See your progress here!</p>
 							<Link to="/progress">
@@ -144,7 +144,7 @@ export const Profile = () => {
 					</div>
 					<div className="card events">
 						<div className="card-body tryinggg">
-							<img src={map} className="map" alt="" />
+							<img src={map} className="map1" alt="" />
 							<h5 className="card-title profileTitle">Upcoming Events</h5>
 							<p className="card-text profileTitle">
 								March 12th, 2020 - Environmental Chemistry and Pollution Control Conference in June 3rd,
