@@ -398,6 +398,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 
+			sendMsg: sms => {
+				fetch("https://3000-c5045596-fcbc-4c3a-a2b8-5941f02c0fac.ws-us02.gitpod.io/sendmsg", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({ message: sms })
+				}).catch(err => console.log("sendMsg ERROR:", err));
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

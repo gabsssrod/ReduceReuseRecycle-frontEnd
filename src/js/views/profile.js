@@ -15,8 +15,15 @@ export const Profile = () => {
 	const { store, actions } = useContext(Context);
 	const [collapse, setCollapse] = useState("d-none");
 	const [button, setButton] = useState("block");
+
 	const [pickDay, setPickDay] = useState();
 	const [pickday2, setPickDay2] = useState();
+
+	const [button1, setButton1] = useState("block");
+	const [collapse1, setCollapse1] = useState("d-none");
+
+	const [notificationDay, setnotificationDay] = useState();
+	const [notificationDay2, setnotificationDay2] = useState();
 
 	let userId = localStorage.getItem("userID");
 
@@ -25,13 +32,26 @@ export const Profile = () => {
 		setButton("d-none");
 	};
 
+	const collapseHandler1 = () => {
+		setCollapse1("block");
+		setButton1("d-none");
+	};
+
 	const confirmDays = () => {
 		setCollapse("d-none");
 		setButton("block");
 		actions.addDays(pickDay, pickday2);
 	};
 
+	const confirmNotification = () => {
+		setCollapse1("d-none");
+		setButton1("block");
+		actions.sendMsg();
+	};
+
 	let days = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+	let daysNotify = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 	return (
 		<div className="zxz">
@@ -98,6 +118,45 @@ export const Profile = () => {
 								</div>
 							</div>
 
+							{/* ------------NOTIFICATION---------------- */}
+							<div className={collapse1}>
+								<div className="select">
+									<select
+										className="form-control form-control-sm profileTitle"
+										onChange={e => setnotificationDay(e.target.value)}>
+										<option>when do you want to be notified: day 1</option>
+										{daysNotify.map((item, index) => {
+											return (
+												<option key={index} value={item}>
+													{item}
+												</option>
+											);
+										})}
+									</select>
+									<br />
+									<select
+										className="form-control form-control-sm profileTitle"
+										onChange={e => setnotificationDay2(e.target.value)}>
+										<option>when do you want to be notified: day 2</option>
+										{daysNotify.map((item, index) => {
+											return (
+												<option key={index} value={item}>
+													{item}
+												</option>
+											);
+										})}
+									</select>
+									<br />
+									<div className="confirmDay">
+										<button className="btn2 btn-light profileTitle" onClick={confirmNotification}>
+											Notify me on these days!
+										</button>
+									</div>
+								</div>
+							</div>
+
+							{/* ------------END NOTIFICATION----------------  */}
+
 							<div className="map days container">
 								<div className="map days text-center">
 									{!store.daysPicked && !userId
@@ -115,6 +174,9 @@ export const Profile = () => {
 							<div className="setDayButton">
 								<button className={button} onClick={collapseHandler}>
 									Set Days
+								</button>
+								<button className={button1} onClick={collapseHandler1}>
+									Set Notifications
 								</button>
 							</div>
 						</div>
