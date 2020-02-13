@@ -122,7 +122,55 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
 					trash:
-						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center. "
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "computer",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "phone",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "cd player",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
+				},
+				{
+					name: "television",
+					material: "varied metals",
+					recycle:
+						"No! Electronics are not able to be recycled. These items can be considered hazardous waste",
+					reduce:
+						"Ways to reduce may not be so obvious so, try focusing on donating these items and properly disposing.",
+					reuse:
+						"Electronics can be donated to electronic donation centers. Many electronics can be reused for parts. Using donated electronics can be a great way to reduce as well.",
+					trash:
+						"These items can be considered hazardous waste. Dispose of these items at a Home Chemical Collection Center or an electronics recycling center. "
 				},
 				{
 					name: "eyeglasses",
@@ -151,12 +199,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "paper",
 					material: "paper",
 					recycle:
-						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables",
+						"Yes! Dry, single-layer paper such as newspapers, magazines, cataologs, telephone books, printer paper, mail, and paper packages are accepted recyclables. Paper must also be seperated from plastics and glass in order to be recycled properly. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
 					reduce:
-						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files.",
+						"Think before you print! If you are wondering how to reduce paper in the office, printing less is an obvious choice. Take paperless notes. Use online or cloud storage for your files. When given the choice opt for online receipts.",
 					reuse:
 						"Use both sides of the paper. Cut off unused portions of paper to use as bookmarks. Use it as packing material.",
-					trash: "No! These items should be recycled."
+					trash: "No! These items should be recycled unless they are crumbled or wet."
+				},
+				{
+					name: "newspaper",
+					material: "paper",
+					recycle:
+						"Yes! Newspapers are one of the easiest items to recycle. Doing so can help to save up to 60 percent of the energy required to make brand new newsprint. Be sure to sort paper into the paper bin and not with the plastics and glass! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
+					reduce:
+						"Most newspaper companies are now available online. This option is a great way to reduce your use of newspapers.",
+					reuse:
+						"Use it as packing material. Reuse as giftwrap. Use it to make fire starting logs. Shred to use as garden mulch.",
+					trash: "No! These items should be recycled unless they are crumbled or wet."
 				},
 				{
 					name: "zip lock bags",
@@ -167,6 +226,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
 					trash: "Yes! Zip lock bags should be placed in your household trash bin."
+				},
+				{
+					name: "receipts",
+					material: "paper",
+					recycle:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and cannot be recycled. However, if the receipt is on plain paper and has a matte finish, it can be recycled. Please recycle in the paper bin!",
+					reduce:
+						"You can ask stores to email you a receipt instead of printing one out on paper. This will save you the trouble of having to sort through a massive pile of receipts later on—and it will help the retailer conserve paper, too!",
+					reuse:
+						"Sadly, its not that practical to reuse receipts, but we are always open to new ideas! Try focusing on properly disposing.",
+					trash:
+						"Maybe! If the receipt is shiny and smooth, it means it is coated with a toxic chemical and should be disposed in the trash."
 				}
 			],
 
