@@ -210,11 +210,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "newspaper",
 					material: "paper",
 					recycle:
-						"Yes! Newspapers are one of the easiest items to recycle. Doing so can help to save up to 60 percent of the energy required to make brand new newsprint. Be sure to sort paper into the paper bin and not with the plastics and glass! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
+						"Yes! Newspapers are one of the easiest items to recycle. Doing so can help to save up to 60 percent of the energy required to make brand new newsprint. Be sure to sort paper into the paper bin! Tip: Don't recycle crumbled paper because it is costly for recycling centers.",
 					reduce:
 						"Most newspaper companies are now available online. This option is a great way to reduce your use of newspapers.",
-					reuse:
-						"Use it as packing material. Reuse as giftwrap. Use it to make fire starting logs. Shred to use as garden mulch.",
+					reuse: "Use it as packing material.",
 					trash: "No! These items should be recycled unless they are crumbled or wet."
 				},
 				{
