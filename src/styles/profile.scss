@@ -1,17 +1,16 @@
 .zxz {
    background-image: url("https://cdn.pixabay.com/photo/2016/01/19/17/51/pine-trees-1149943_1280.jpg");
     background-size: cover;
-    height: 800px;
+    height: 1000px;
     text-align: center;
     margin-top: -75px;
     padding-top: 10%;
 }
 
 
-.cardSearch {
-    border: 5px;
-}
-
+// .cardSearch {
+//     border: 5px;
+// }
 
 .tryinggg{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -25,3 +24,13 @@
 .confirmDay{ 
     text-align: center;  
 };
+
+.map{
+    width: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.profileTitle{
+    font-family: 'Noto Serif JP', serif;
+}

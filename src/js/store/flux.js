@@ -145,6 +145,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"If taken to a Home Chemical Collection Center oil can be safely recycled or disposed. Recycling used oil keeps it from polluting soil and water.",
 					trash:
 						"No! Motor oil should not go in your trash bin. Take used motor oil to a Home Chemical Collection Center."
+<<<<<<< HEAD
 				},
 				{
 					name: "paper",
@@ -166,6 +167,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					reuse:
 						"Rinse out and reuse zip lock bags or consider using reusable Tupperware to transport items.",
 					trash: "Yes! Zip lock bags should be placed in your household trash bin."
+=======
+>>>>>>> 6f0eea1a153d69ef5b84f3c764dea05e56048b16
 				}
 			],
 
